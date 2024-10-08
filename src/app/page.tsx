@@ -89,20 +89,20 @@ export default function Home() {
 						<RevealFx translateY="12" delay={0.4}>
 							<Button
 								data-border="rounded"
-								href="/about"
+								/*href="/about"*/
 								variant="tertiary"
 								suffixIcon="chevronRight"
 								size="m">
 								<Flex
 									gap="8"
 									alignItems="center">
-									{about.avatar.display && (
+									{/*about.avatar.display && (
 										<Avatar
 											style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
 											src={person.avatar}
 											size="m"/>
-										)}
-										About me
+										)*/}
+										
 								</Flex>
 							</Button>
 						</RevealFx>
