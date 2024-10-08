@@ -50,12 +50,19 @@ export const Mailchimp = () => {
     };
 
     return (
-        <Flex
+        <Flex  style={{overflow: 'hidden'}}
+        position="relative"
+        fillWidth padding="l"  radius="l" marginBottom="m"
+        direction="column" alignItems="center" align="center"
+        background="surface" border="neutral-medium" borderStyle="solid-1">
+            <h1>Portfolio en construccion</h1>
+        </Flex>
+       /* <Flex
             style={{overflow: 'hidden'}}
             position="relative"
             fillWidth padding="l"  radius="l" marginBottom="m"
             direction="column" alignItems="center" align="center"
-            background="surface" border="neutral-medium" borderStyle="solid-1">
+            background="surface" border="neutral-medium" borderStyle="solid-1">/*
             <Background
                 position="absolute"
                 gradient={mailchimp.effects.gradient}
@@ -129,6 +136,6 @@ export const Mailchimp = () => {
                     </div>
                 </Flex>
             </form>
-        </Flex>
-    )
+        </Flex> 
+    */)
 }

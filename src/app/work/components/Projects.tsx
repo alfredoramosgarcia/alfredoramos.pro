@@ -18,8 +18,8 @@ export function Projects({ range }: ProjectsProps) {
         ? sortedProjects.slice(range[0] - 1, range[1] ?? sortedProjects.length)
         : sortedProjects;
 
-    return (
-        <Flex
+    return (<br></br>
+        /*<Flex
             fillWidth gap="l" marginBottom="40" paddingX="l"
             direction="column">
             {displayedProjects.map((post) => (
@@ -32,6 +32,6 @@ export function Projects({ range }: ProjectsProps) {
                     content={post.content}
                     avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}/>
             ))}
-        </Flex>
+        </Flex>*/
     );
 }
