@@ -27,7 +27,7 @@ import { toast } from 'sonner';
 interface ContactFormProps {
   lang: LanguageCode;
   formTranslations: ContactFormTranslations;
-  onSubmitSuccess?: () => void; // Optional callback for successful submission
+  onSubmitSuccess?: () => void;
 }
 
 export function ContactForm({
@@ -60,31 +60,41 @@ export function ContactForm({
         body: JSON.stringify({ ...values, lang }),
       });
 
-      const result: ContactFormApiResponse = await response.json();
+      let result: ContactFormApiResponse;
 
-      if (result.status === 'success') {
-        console.log('Form submitted successfully:', result);
-        toast.success(
-          result.message || formTranslations.toastSuccessMessageSent
-        );
-        form.reset();
-        if (onSubmitSuccess) {
-          onSubmitSuccess();
+      try {
+        const contentType = response.headers.get('Content-Type');
+        if (contentType && contentType.includes('application/json')) {
+          result = await response.json();
+        } else {
+          throw new Error('Respuesta no es JSON');
         }
-      } else if (result.status === 'error') {
-        console.error('Form submission error:', result);
-        // Attempt to display server-side validation errors if available
+      } catch (e) {
+        console.error('Error al parsear respuesta JSON del servidor:', e);
+        toast.error(formTranslations.toastErrorUnexpected);
+        return;
+      }
+
+      if (!response.ok || result.status === 'error') {
         let errorMessage =
           result.message || formTranslations.toastErrorFailedToSend;
         if (result.errors) {
-          // Example: Concatenate all error messages (you might want a more sophisticated display)
           const errorMessages = Object.values(result.errors).flat().join('\n');
           errorMessage += `\n\n${formTranslations.toastErrorDetails}\n${errorMessages}`;
         }
         toast.error(errorMessage);
+        return;
+      }
+
+      toast.success(
+        result.message || formTranslations.toastSuccessMessageSent
+      );
+      form.reset();
+      if (onSubmitSuccess) {
+        onSubmitSuccess();
       }
     } catch (error) {
-      console.error('An unexpected error occurred:', error);
+      console.error('Error inesperado durante envío del formulario:', error);
       toast.error(formTranslations.toastErrorUnexpected);
     }
   }
