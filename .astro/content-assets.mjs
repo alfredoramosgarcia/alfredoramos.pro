@@ -1,0 +1,7 @@
+
+import __ASTRO_IMAGE_IMPORT_5VTVf from "../../../../assets/placeholder.webp?astroContentImageFlag=&importer=src%2Ffeatures%2Fblog%2Fcontent%2Fen%2Fexample-post.mdx";
+import __ASTRO_IMAGE_IMPORT_Z6sXxw from "../../../../assets/placeholder.webp?astroContentImageFlag=&importer=src%2Ffeatures%2Fblog%2Fcontent%2Ffr%2Fexemple-article.mdx";
+import __ASTRO_IMAGE_IMPORT_wz9HD from "../../../../assets/placeholder.webp?astroContentImageFlag=&importer=src%2Ffeatures%2Ftips%2Fcontent%2Fen%2Fexample-tip.mdx";
+import __ASTRO_IMAGE_IMPORT_1WEtzu from "../../../../assets/placeholder.webp?astroContentImageFlag=&importer=src%2Ffeatures%2Ftips%2Fcontent%2Ffr%2Fexemple-astuce.mdx";
+export default new Map([["../../../../assets/placeholder.webp?astroContentImageFlag=&importer=src%2Ffeatures%2Fblog%2Fcontent%2Fen%2Fexample-post.mdx", __ASTRO_IMAGE_IMPORT_5VTVf], ["../../../../assets/placeholder.webp?astroContentImageFlag=&importer=src%2Ffeatures%2Fblog%2Fcontent%2Ffr%2Fexemple-article.mdx", __ASTRO_IMAGE_IMPORT_Z6sXxw], ["../../../../assets/placeholder.webp?astroContentImageFlag=&importer=src%2Ffeatures%2Ftips%2Fcontent%2Fen%2Fexample-tip.mdx", __ASTRO_IMAGE_IMPORT_wz9HD], ["../../../../assets/placeholder.webp?astroContentImageFlag=&importer=src%2Ffeatures%2Ftips%2Fcontent%2Ffr%2Fexemple-astuce.mdx", __ASTRO_IMAGE_IMPORT_1WEtzu]]);
+		
