@@ -1,43 +1,22 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import { defaultLanguage, useTranslations, type LanguageCode } from '@/i18n/ui';
-import {
-  PortfolioScreen,
-  getTranslatedProjects,
-  getTranslatedSkills,
-  type TranslatedSkill,
-  type TranslatedProject,
-} from '@/features/projects';
+import Layout from "../layouts/Layout.astro";
+import Experience from "../components/portfolio/Experience.astro";
+import HeroIndex from "../components/portfolio/HeroIndex.astro";
+import Contact from "../components/portfolio/Contact.astro";
+import ListProjects from "../components/portfolio/ListProjects.astro";
+import { getCollection } from "astro:content";
 
-const lang =
-  (Astro.currentLocale as LanguageCode | undefined) ?? defaultLanguage;
-const t = useTranslations(lang, 'homePage');
-
-const pageTitle = t('pageTitle');
-const pageDescription = t('pageDescription');
-
-const projects: Array<TranslatedProject> = getTranslatedProjects(lang);
-const skills: Array<TranslatedSkill> = getTranslatedSkills(lang);
-
-const layoutProps = {
-  lang,
-  projects,
-  skills,
-  heroGreeting: t('heroGreeting'),
-  heroSubtitlePart1: t('heroSubtitlePart1'),
-  heroSubtitlePart2: t('heroSubtitlePart2'),
-  heroIntroduction: t('heroIntroduction'),
-  heroViewWorkButton: t('heroViewWorkButton'),
-  heroContactButton: t('heroContactButton'),
-  imageNotAvailable: t('imageNotAvailable'),
-  featuredProjectsTitle: t('featuredProjectsTitle'),
-  featuredProjectsDescription: t('featuredProjectsDescription'),
-  mySkillsTitle: t('mySkillsTitle'),
-  mySkillsDescription: t('mySkillsDescription'),
-  projectPreviewCtaText: t('projectCardViewProject'),
-};
+const [staticData] = await getCollection("staticData");
+const { pageTitle, pageDescription, OGImage } = staticData.data;
 ---
 
-<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
-  <PortfolioScreen {...layoutProps} />
-</BaseLayout>
+<Layout
+  pageTitle={pageTitle}
+  description={pageDescription}
+  ogimage={{ alt: OGImage.alt, url: OGImage.url }}
+>
+  <HeroIndex />
+  <Experience />
+  <ListProjects />
+  <Contact />
+</Layout>

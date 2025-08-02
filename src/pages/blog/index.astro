@@ -1,37 +1,22 @@
 ---
-import { AllBlogPostsScreen } from '@/features/blog';
-import { defaultLanguage, useTranslations, type LanguageCode } from '@/i18n/ui';
-import { getCollection, render, type CollectionEntry } from 'astro:content';
-
-const lang = (Astro.currentLocale ?? defaultLanguage) as LanguageCode;
-const t = useTranslations(lang, 'blogPage');
-
-const blogEntries: Array<CollectionEntry<'blog'>> = await getCollection(
-  'blog',
-  ({ data, id }) => {
-    return data.isDraft !== true && id.startsWith('fr/');
-  }
-);
-
-const enrichedPosts = await Promise.all(
-  blogEntries.map(async (postEntry: CollectionEntry<'blog'>) => {
-    const { remarkPluginFrontmatter } = await render(postEntry);
-    return {
-      id: postEntry.id,
-      slug: postEntry.id,
-      collection: postEntry.collection,
-      data: {
-        ...postEntry.data,
-        readingTimeMinutes: remarkPluginFrontmatter.readingTimeMinutes,
-      },
-    };
-  })
-);
-
-enrichedPosts.sort(
-  (a, b) =>
-    new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
-);
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/blog/Hero.astro";
+import Tags from "../../components/blog/Tags.astro";
+import ListPosts from "../../components/blog/ListPosts.astro";
+const pageTitle = "Web Development and Technology Blog | Fernando López | EFEELE";
+const description = "Welcome to my blog, where I share my passion for frontend development, web design, and the latest technology trends.";
+const ogimage ={
+    url: "/images/blogimage.webp",
+    alt: "EFEELE.dev logo with green background and light effect. Text: 'Web Development and Technology Blog' and URL 'www.efeele.dev'."
+};
 ---
 
-<AllBlogPostsScreen posts={enrichedPosts} lang={lang} />
+<Layout  pageTitle={pageTitle} description={description} ogimage={ogimage}>
+   
+    <Hero />
+    <Tags />
+    <div class="px-8 max-sm:px-4">
+        <ListPosts />
+    </div>
+
+</Layout>
