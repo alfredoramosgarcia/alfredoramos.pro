@@ -8,20 +8,20 @@ image:
   alt: "Profile photo of Alfredo Ramos García"
 ---
 
-I’m **Alfredo Ramos García**, a computer engineer passionate about **software development**, **cybersecurity**, and **infrastructure technologies**. With a strong focus on adaptability and collaboration, I’ve worked in multidisciplinary environments developing products for key clients such as **Navantia**. My goal is to keep evolving in the tech space, especially in areas like cybersecurity and cloud systems.
+I’m **Alfredo Ramos García**, a Software Engineer passionate about **Cybersecurity**, **Software Development** and **infrastructure technologies**. With a strong focus on adaptability and collaboration, I’ve worked in multidisciplinary environments developing products for key clients such as **Navantia**. My goal is to keep evolving in the tech space, especially in areas like cybersecurity and cloud systems.
 
 ## 🎓 Academic Background
 
 - **Master’s in Cybersecurity** – *International University of La Rioja (2025 - Present)*
 - **Bachelor’s in Computer Engineering** – *University of Cádiz (2017 - Present)*
 - **Technological Sciences High School Diploma (French first language)** – *I.E.S. Castillo de Matrera (2015 - 2017)*
-- **Bilingual Secondary Education (English first language)** – *I.E.S. Castillo de Matrera (2011 - 2015)*
+- **Bilingual Secondary Education (English First Language)** – *I.E.S. Castillo de Matrera (2011 - 2015)*
 
 ## 💼 Work Experience
 
 ### Software Engineer  
 **Alten Soluciones Productos Auditoría e Ingeniería SAU** (2023 – Present)  
-- Developed internal tools and client software (e.g. **Navantia**, **C4IP**, **Digital Twin**).
+- Developed internal tools and client software (e.g. **Navantia**, **C4IP**, **Digital Twin**, **NAIAD**, or **Combat Cloud*).
 - Participated in project documentation and maintenance tasks.
 
 ### Software Development Intern  
