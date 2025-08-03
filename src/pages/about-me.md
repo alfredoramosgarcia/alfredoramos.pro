@@ -41,11 +41,11 @@ I’m **Alfredo Ramos García**, a Software Engineer passionate about **Cybersec
 
 **Languages:**  
 C, C++, Java, Python, Node.js, TypeScript, JavaScript  
-HTML, CSS (intermediate)
+HTML, CSS 
 
 **Tools & Tech:**  
 Docker, Kubernetes, AWS, Unity, PostgreSQL, MongoDB  
-Cybersecurity (basics), Data Mining (basics)
+Cybersecurity, Data Mining 
 
 ## 📜 Certifications
 
