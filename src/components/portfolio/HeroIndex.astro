@@ -1,5 +1,6 @@
 ---
 import Button from "../ui/Button.astro";
+import CVDropdown from "../ui/CVDropdown.astro";
 import Heading from "../ui/Heading.astro";
 import Tools from "../portfolio/Tools.astro";
 import { Icon } from "astro-icon/components";
@@ -27,7 +28,7 @@ const {
   aria-label="Professional profile and introduction"
 >
   <div
-    class="mx-auto mb-4 h-96 w-full max-w-7xl rounded-2xl bg-linear-to-r from-mint-300 dark:from-mint-600 to-mint-50 dark:to-mint-200/5 hover:to-mint-300/30 dark:hover:to-mint-600/30 p-[.2rem] max-md:h-auto"
+    class="mx-auto mb-4 h-118 w-full max-w-7xl rounded-2xl bg-linear-to-r from-mint-300 dark:from-mint-600 to-mint-50 dark:to-mint-200/5 hover:to-mint-300/30 dark:hover:to-mint-600/30 p-[.2rem] max-md:h-auto"
   >
     <div
       class="group relative z-0 flex h-full items-center justify-center gap-8 overflow-hidden rounded-2xl bg-linear-to-tr from-riptide-100 to-white p-4 transition-all hover:shadow-[0_10px_50px_rgba(13,188,130,0.2)] dark:bg-linear-to-r dark:from-mint-950 dark:to-zinc-950 dark:overflow-hidden max-md:w-full max-md:gap-3 max-lg:gap-2 max-sm:flex-col dark:before:bg-[radial-gradient(circle,rgba(13,188,130)_0,rgba(1,45,34)_100%)] before:bg-[radial-gradient(circle,rgba(95,255,202)_0,rgba(144,253,210)_100%)] before:absolute before:left-65 before:top-10 before:h-[40%] before:aspect-square before:rounded-full before:blur-3xl before:opacity-80 before:-z-10 before:transition hover:before:animate-pulse"
@@ -91,12 +92,15 @@ const {
             text={contactSectionButtonText}
             iconName={emailIconName}
           />
-          <Button
-            link={profileLink}
+        <CVDropdown
             text="CV"
             iconName="cv"
             variant="dark"
-          />
+            options={[
+              { label: "Spanish CV", url: "/src/files/AlfredoRamosGarcia_Spanish.pdf" },
+              { label: "English CV", url: "/src/files/AlfredoRamosGarcia_English.pdf" }
+    ]}
+/>
         </div>
       </div>
     </div>

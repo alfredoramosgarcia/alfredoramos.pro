@@ -1,0 +1,164 @@
+---
+import { Icon } from "astro-icon/components";
+
+type ButtonVariant = "default" | "big" | "dark";
+
+interface Props {
+  text: string;
+  iconName?: string;
+  variant?: ButtonVariant;
+  options: { label: string; url: string }[];
+  class?: string;
+}
+
+const {
+  text,
+  iconName,
+  variant = "dark",
+  options,
+  class: className = "",
+} = Astro.props as Props;
+
+const baseClasses = `
+  z-2 
+  text-center 
+  cursor-pointer 
+  leading-none 
+  hover:scale-110 
+  w-fit 
+  font-medium 
+  flex 
+  gap-2 
+  transition-all 
+  ease-in-out 
+  justify-center 
+  items-center 
+  rounded-full
+`;
+
+const variantClasses = {
+  default: `
+    text-blacktext/90 
+    dark:text-mint-50 
+    dark:hover:text-white 
+    px-6 py-4 text-lg
+    hover:bg-linear-to-l 
+    bg-linear-to-r 
+    from-riptide-300 to-mint-300
+  `,
+  big: `
+    font-normal gap-3 text-blacktext dark:text-mint-50 
+    px-8 py-5 text-2xl
+    hover:bg-linear-to-l bg-linear-to-r 
+    from-riptide-200 to-mint-200
+  `,
+  dark: `
+    group dark:text-mint-50 text-blacktext
+    dark:hover:text-white px-6 py-4 text-lg
+    dark:bg-zinc-800 bg-white
+    dark:hover:bg-mint-500
+  `,
+};
+
+const iconClasses = {
+  default: "size-5",
+  big: "size-5",
+  dark: "size-5 dark:text-mint-300 text-blacktext group-hover:text-blacktext dark:group-hover:text-white transition-colors",
+};
+
+const buttonClasses = `${baseClasses} ${variantClasses[variant]}`;
+const dropdownId = `dd-${Math.random().toString(36).slice(2)}`;
+---
+
+<div class="relative inline-block" id={dropdownId}>
+  <!-- wrapper que se desplazará -->
+  <div
+    id={`${dropdownId}-offset-wrapper`}
+    class="transition-transform duration-300 ease-in-out"
+  >
+    <!-- botón -->
+    <div
+      class="w-fit h-fit from-transparent via-riptide-300 to-transparent 
+             dark:from-transparent dark:via-mint-500 dark:to-transparent  
+             from-40% to-60% animate-rotate-border bg-conic/[from_var(--border-angle)] 
+             p-px hover:shadow-lg hover:shadow-mint-500/30 rounded-full"
+    >
+      <button
+        type="button"
+        class:list={[buttonClasses, className]}
+        aria-haspopup="menu"
+        aria-expanded="false"
+        aria-controls={`${dropdownId}-menu`}
+        onclick={`(function(){
+          const root = document.getElementById('${dropdownId}');
+          const btn = root.querySelector('button');
+          const menu = root.querySelector('ul');
+          const wrapper = document.getElementById('${dropdownId}-offset-wrapper');
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+          btn.setAttribute('aria-expanded', String(!expanded));
+          menu.classList.toggle('hidden');
+
+          if (!expanded) {
+            wrapper.classList.add('max-md:-translate-x-6');
+          } else {
+            wrapper.classList.remove('max-md:-translate-x-6');
+          }
+
+          if (!expanded) {
+            document.addEventListener('click', function handler(e) {
+              if (!root.contains(e.target)) {
+                btn.setAttribute('aria-expanded', 'false');
+                menu.classList.add('hidden');
+                wrapper.classList.remove('max-md:-translate-x-6');
+                document.removeEventListener('click', handler);
+              }
+            });
+          }
+        })()`}
+      >
+        {iconName && (
+          <Icon name={iconName} class={iconClasses[variant]} aria-hidden="true" />
+        )}
+        {text}
+        <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            fill-rule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0l-4.25-4.25a.75.75 0 01.02-1.06z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- dropdown -->
+    <ul
+  id={`${dropdownId}-menu`}
+  class="absolute hidden 
+         md:top-full md:left-0 
+         top-0 left-full 
+         mt-0 md:mt-2 ml-2 md:ml-0
+         w-30 md:w-48
+         break-words
+         bg-white dark:bg-zinc-900 
+         border border-zinc-200 dark:border-zinc-700 
+         rounded-lg shadow-lg 
+         overflow-hidden z-50 transition-all"
+  role="menu"
+>
+      {options.map((opt) => (
+        <li role="none">
+          <a
+            href={opt.url}
+            download
+            class="block px-4 py-2 text-sm text-black dark:text-white 
+                   hover:bg-mint-100 dark:hover:bg-zinc-800 transition-colors"
+            role="menuitem"
+          >
+            {opt.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
