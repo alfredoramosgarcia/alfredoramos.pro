@@ -106,6 +106,10 @@ export const languages: Record<string, Language> = {
 		name: "Gradle",
 		iconName: "gradle",
 	},
+	typescript: {
+		name: "Typescript",
+		iconName: "typescript",
+	},
 };
 
 export const getLanguage = (lang: string): Language => {
