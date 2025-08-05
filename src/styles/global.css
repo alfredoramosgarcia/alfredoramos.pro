@@ -35,6 +35,8 @@
 	--color-riptide-800: #1e40af;
 	--color-riptide-900: #1e3a8a;
 	--color-riptide-950: #172554;
+	--color-icon-bg: #4b5563;
+	/* gray-700 */
 
 	--animate-rotate: rotate 10s linear infinite;
 	--animate-rotate-border: border-rotate 3s linear infinite;
