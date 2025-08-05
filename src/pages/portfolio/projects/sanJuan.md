@@ -3,15 +3,15 @@ layout:  /src/layouts/ProjectLayout.astro
 title: 'sanJuan'
 pubDate: 2025-04-05
 description: 'sanJuan is the official website for the launch of San Juan, my latest music album. The site showcases the album’s concept, tracklist, visuals, and streaming links. It’s designed to provide listeners with an immersive introduction to the project and its artistic vision.'
-languages: ["html", "css", "typescript","vercel"]
+languages: ["html", "css", "typescript", "nexjst", "vercel"]
 image:
-  url: "/images/projects/neonmint.webp"
+  url: "/images/projects/sanjuan.png"
   alt: "Thumbnail of Astro arches."
 --- 
 
 **alfredoramos.pro** is a modern, minimalist web template created for developers, designers, and digital creatives. This project aims to offer an elegant and functional visual experience, combining a dark-toned aesthetic with mint green accents to highlight content without distractions.
 
-Developed with **Astro** and styled with **TailwindCSS**, NeonMint focuses on speed, modularity, and a component-centered architecture.
+Developed with **Next JS** and styled with **HTML** and **CSS**, sanJuan focuses on speed, modularity, and a component-centered architecture.
 
 ## 🧩 Features
 

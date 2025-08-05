@@ -5,7 +5,7 @@ pubDate: 2025-04-05
 description: 'alfredoramos.pro is a modern, minimalist template crafted for developers and digital creatives.'
 languages: ["astro", "tailwind", "javascript","vercel"]
 image:
-  url: "/images/projects/neonmint.webp"
+  url: "/images/projects/alfredoramospro.png"
   alt: "Thumbnail of Astro arches."
 --- 
 
