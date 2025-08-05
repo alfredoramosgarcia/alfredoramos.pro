@@ -9,7 +9,7 @@ image:
   alt: "Thumbnail of Astro arches."
 --- 
 
-**alfredoramos.pro** is a modern, minimalist web template created for developers, designers, and digital creatives. This project aims to offer an elegant and functional visual experience, combining a dark-toned aesthetic with mint green accents to highlight content without distractions.
+**sanJuan** is the official website for the launch of San Juan, my latest music album. The site showcases the album’s concept, tracklist, visuals, and streaming links. It’s designed to provide listeners with an immersive introduction to the project and its artistic vision.
 
 Developed with **Next JS** and styled with **HTML** and **CSS**, sanJuan focuses on speed, modularity, and a component-centered architecture.
 
@@ -20,20 +20,20 @@ Developed with **Next JS** and styled with **HTML** and **CSS**, sanJuan focuses
 - Clean and reusable UI components
 - Ideal for portfolios, dashboards or tech landing pages
 - Modern typography and clear visual hierarchy
-- Developed with **Astro**
-- Styled with **TailwindCSS**
+- Developed with **Next JS**
+- Styled with **HTML** and **CSS**
 
 ## 💡 Technologies used
 
-- Astro
-- TailwindCSS
+- Typescript
+- CSS
 - HTML5
-- JavaScript
+- Vercel  
 
 
 ## 🌐 Demo
 
-👉 [View live demo](https://github.com/EFEELE/NeonMint) 
+👉 [View live demo](https://github.com/alfredoramosgarcia/sanJuan) 
 
 ## 🎯 Objective
 
