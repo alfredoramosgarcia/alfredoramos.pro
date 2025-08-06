@@ -1,26 +1,22 @@
 
-# NeonMint Template Documentation
+# alfredoramos.pro Template Documentation
 
-![neonmint](https://github.com/user-attachments/assets/ae539704-2292-492f-882c-c90595b34717)
+![neonmint](/images/projects/alfredoramospro.png)
 
 
 ## 🎯 Overview
 
-**NeonMint** is a minimalist and modern template designed for developers and digital creatives. Its dark-toned aesthetic with mint green accents offers a clean, elegant, and functional visual experience, ideal for portfolios, dashboards, or tech landing pages.
+**alfredoramos.pro** is a minimalist and modern template designed for developers and digital creatives. Its dark-toned aesthetic with mint green accents offers a clean, elegant, and functional visual experience, ideal for portfolios, dashboards, or tech landing pages.
 
 ## 📁 Project Structure
 
 ```bash
-└── 📁NeonMint
+└── 📁alfredoramos.pro
     └── 📁public
-        ├── android-chrome-192x192.png
-        ├── android-chrome-512x512.png
-        ├── apple-touch-icon.png
-        ├── favicon-16x16.png
-        ├── favicon-32x32.png
+        ├── foto.jpg
+        ├── logo.png
         ├── favicon.ico
         └── 📁images
-            ├── 📁posts    # Post images
             └── 📁projects # Project images
         └── site.webmanifest # PWA configuration file
     └── 📁src
@@ -29,6 +25,10 @@
         │   ├── 📁layout  # Layout components
         │   ├── 📁portfolio # Portfolio components
         │   └── 📁ui      # UI components
+				├── 📁content     # Web content
+        │   ├── 📁staticData    
+        │   ├── config.ts
+				├── 📁files       # Web files
         ├── 📁icons       # Icons (.svg)
         ├── 📁layouts     # Site layouts
         │   ├── Layout.astro           # Main application layout
@@ -37,12 +37,6 @@
         │   └── ProjectLayout.astro    # Projects page layout
         ├── 📁pages       # Site pages
         │   ├── about-me.md            # About-me page
-        │   ├── 📁blog   # All posts page
-        │   │   ├── index.astro        # Blog home page
-        │   │   ├── 📁posts            # Blog posts
-        ├── │   ├── └── index.astro     # All posts page
-        │   │   ├── 📁tags             # Blog tags
-        │   │   └── 📁techs            # Blog technologies
         │   ├── index.astro            # Home page
         │   ├── 📁portfolio
         │   │   └── 📁projects         # Portfolio projects
@@ -99,11 +93,6 @@
 
 1. **📦 Installation**
 
-   ### 🚀**Astro Installation**
-   ```bash
-   npm create astro@latest -- --template EFEELE/neonmint
-   ```
-   or
    ### 🔧**Manual Installation**
    
    #### Clone Repository
@@ -183,14 +172,13 @@ To customize your site's favicon and web app icons, you can generate all the nec
 Place the generated files in the `📂 public` directory as follows:
 
 ```bash
-📂 public
-├── 📄 android-chrome-192x192.png
-├── 📄 android-chrome-512x512.png
-├── 📄 apple-touch-icon.png
-├── 📄 favicon-16x16.png
-├── 📄 favicon-32x32.png
-├── 📄 favicon.ico
-└── 📄 site.webmanifest
+    └── 📁public
+        ├── foto.jpg
+        ├── logo.png
+        ├── favicon.ico
+        └── 📁images
+            └── 📁projects # Project images
+        └── site.webmanifest # PWA configuration file
 ```
 
 > 💡 Don’t forget to update the contents of `site.webmanifest` to match your app’s name, description, and theme color for a complete PWA experience.
