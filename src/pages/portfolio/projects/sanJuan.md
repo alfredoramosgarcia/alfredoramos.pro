@@ -3,7 +3,7 @@ layout:  /src/layouts/ProjectLayout.astro
 title: 'sanJuan'
 pubDate: 2025-04-05
 description: 'sanJuan is the official website for the launch of San Juan, my latest music album. The site showcases the album’s concept, tracklist, visuals, and streaming links. It’s designed to provide listeners with an immersive introduction to the project and its artistic vision.'
-languages: ["html", "css", "typescript", "nexjst", "vercel"]
+languages: ["html", "css", "typescript", "nextjs", "vercel"]
 image:
   url: "/images/projects/sanjuan.png"
   alt: "Thumbnail of Astro arches."
@@ -16,9 +16,6 @@ Developed with **Next JS** and styled with **HTML** and **CSS**, sanJuan focuses
 ## 🧩 Features
 
 - Responsive and minimalist design
-- Dark mode aesthetic with mint green accents
-- Clean and reusable UI components
-- Ideal for portfolios, dashboards or tech landing pages
 - Modern typography and clear visual hierarchy
 - Developed with **Next JS**
 - Styled with **HTML** and **CSS**
@@ -33,11 +30,11 @@ Developed with **Next JS** and styled with **HTML** and **CSS**, sanJuan focuses
 
 ## 🌐 Demo
 
-👉 [View live demo](https://github.com/alfredoramosgarcia/sanJuan) 
+👉 [View live demo](https://www.estoessanjuan.es/) 
 
 ## 🎯 Objective
 
-The purpose of NeonMint is to combine style and functionality in a clean interface that enhances content without overwhelming the user. It's an exercise in design and development focused on visual detail and user experience.
+The purpose of sanJuan is to combine style and functionality in a clean interface that enhances content without overwhelming the user. It's an exercise in design and development focused on visual detail and user experience.
 
 
 🚀 *Developed by Alfredo Ramos.*
