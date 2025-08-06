@@ -1,7 +1,7 @@
 
 # alfredoramos.pro Template Documentation
 
-![neonmint](/images/projects/alfredoramospro.png)
+![alfredoramos.pro](/public/images/projects/alfredoramospro.png)
 
 
 ## 🎯 Overview
@@ -172,13 +172,13 @@ To customize your site's favicon and web app icons, you can generate all the nec
 Place the generated files in the `📂 public` directory as follows:
 
 ```bash
-    └── 📁public
-        ├── foto.jpg
-        ├── logo.png
-        ├── favicon.ico
-        └── 📁images
-            └── 📁projects # Project images
-        └── site.webmanifest # PWA configuration file
+└── 📁public
+    ├── foto.jpg
+    ├── logo.png
+    ├── favicon.ico
+    └── 📁images
+        └── 📁projects # Project images
+    └── site.webmanifest # PWA configuration file
 ```
 
 > 💡 Don’t forget to update the contents of `site.webmanifest` to match your app’s name, description, and theme color for a complete PWA experience.
