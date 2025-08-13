@@ -1,58 +1,134 @@
 ---
-import Navigation from "./Navigation.astro";
-import ThemeIcon from "../ui/ThemeIcon.astro";
-import Social from "../ui/Social.astro";
 import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
+import Social from "../ui/Social.astro";
+import ThemeIcon from "../ui/ThemeIcon.astro";
+import Navigation from "./Navigation.astro";
 
 const [staticData] = await getCollection("staticData");
 const { github, githubIconName, linkedin, linkedinIconName } = staticData.data;
 
-const navItems = ["home", "experience", "projects", "contact"]
+const navItems = ["home", "experience", "projects", "contact"];
 ---
 
 <header
-	role="banner"
-	aria-label="Main navigation"
-	class="sticky top-0 z-50 w-full p-4 font-medium text-blacktext dark:text-zinc-300 dark:bg-[#0E0E11]/80 dark:border-b dark:border-zinc-800 bg-white/90 backdrop-blur-xs dark:backdrop-blur-xs max-md:z-50 max-md:px-0 transition-all"
+    role="banner"
+    aria-label="Main navigation"
+    class="sticky top-0 z-50 w-full p-4 font-medium text-blacktext dark:text-zinc-300 dark:bg-[#0E0E11]/80 dark:border-b dark:border-zinc-800 bg-white/90 backdrop-blur-xs dark:backdrop-blur-xs max-md:z-50 max-md:px-0 transition-all"
 >
-	<div
-		class="relative mx-auto flex max-w-7xl flex-row items-center justify-between max-xl:px-6"
-	>
-		<a href="/" aria-label="Go to home">
-			<Icon
-				name="logo"
-				class="w-20 h-20 cursor-pointer transition-all hover:text-mint-300"
-				aria-hidden="true"
-			/>
-		</a>
+    <div
+        class="relative mx-auto flex max-w-7xl flex-row items-center justify-between max-xl:px-6"
+    >
+        <a href="/" aria-label="Go to home">
+            <Icon
+                name="logo"
+                class="w-20 h-20 cursor-pointer transition-all hover:text-mint-300"
+                aria-hidden="true"
+            />
+        </a>
 
-		<Navigation items={navItems} />
+        <Navigation items={navItems} />
 
-		<div class="flex items-center justify-between gap-5 text-xl">
-			<div
-				class="max-md:hidden flex items-center justify-center gap-5"
-				role="group"
-			>
-				<Social link={github} iconName={githubIconName} />
-				<Social link={linkedin} iconName={linkedinIconName} />
-			</div>
-		</div>
-		<div class="flex items-center gap-5 text-xl md:pl-5">
-			<ThemeIcon />
-			<button
-				class="hamburger"
-				aria-label="Open menu"
-				aria-expanded="false"
-				aria-controls="mobile-menu"
-			>
-				<Icon name="bars" class="hamburger-icon bars-icon" aria-hidden="true" />
-				<Icon
-					name="xmark"
-					class="hamburger-icon xmark-icon"
-					aria-hidden="true"
-				/>
-			</button>
-		</div>
-	</div>
+        <div class="flex items-center justify-between gap-5 text-xl">
+            <div
+                class="max-md:hidden flex items-center justify-center gap-5"
+                role="group"
+            >
+                <Social link={github} iconName={githubIconName} />
+                <Social link={linkedin} iconName={linkedinIconName} />
+            </div>
+        </div>
+        <div class="flex items-center gap-5 text-xl md:pl-5">
+            <ThemeIcon />
+            <button
+                id="hamburger-btn"
+                type="button"
+                class="hamburger md:hidden"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+            >
+                <Icon
+                    name="bars"
+                    class="hamburger-icon bars-icon"
+                    aria-hidden="true"
+                />
+                <Icon
+                    name="xmark"
+                    class="hamburger-icon xmark-icon"
+                    aria-hidden="true"
+                />
+            </button>
+
+            <!-- Desplegable móvil -->
+            <nav
+                id="mobile-menu"
+                hidden
+                class="absolute right-0 top-full mt-2 w-[min(92vw,20rem)] rounded-xl border bg-white/95 p-3 shadow-lg ring-1 ring-black/5 md:hidden dark:bg-zinc-900/95"
+            >
+                <ul
+                    class="flex flex-col divide-y divide-black/5 dark:divide-white/10"
+                >
+                    {
+                        navItems.map((item) => (
+                            <li>
+                                <a
+                                    href={`#${item}`}
+                                    class="block px-3 py-2 capitalize hover:underline"
+                                    onClick="document.getElementById('hamburger-btn').setAttribute('aria-expanded', 'false'); document.getElementById('mobile-menu').setAttribute('hidden','');"
+                                >
+                                    {item}
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>
 </header>
+
+<script type="module">
+    const btn = document.getElementById("hamburger-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    if (btn && menu) {
+        // Estado inicial sincronizado
+        const sync = () => {
+            const isOpen = btn.getAttribute("aria-expanded") === "true";
+            if (isOpen) menu.removeAttribute("hidden");
+            else menu.setAttribute("hidden", "");
+        };
+
+        const closeMenu = () => {
+            btn.setAttribute("aria-expanded", "false");
+            menu.setAttribute("hidden", "");
+        };
+
+        const openMenu = () => {
+            btn.setAttribute("aria-expanded", "true");
+            menu.removeAttribute("hidden");
+        };
+
+        btn.addEventListener("click", () => {
+            const isOpen = btn.getAttribute("aria-expanded") === "true";
+            isOpen ? closeMenu() : openMenu();
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeMenu();
+        });
+
+        document.addEventListener("click", (e) => {
+            if (
+                !menu.hidden &&
+                !btn.contains(e.target) &&
+                !menu.contains(e.target)
+            ) {
+                closeMenu();
+            }
+        });
+
+        sync(); // asegura estado inicial correcto
+    }
+</script>
