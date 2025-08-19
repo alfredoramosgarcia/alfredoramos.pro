@@ -1,8 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
-import cvEn from "../../../files/AlfredoRamosGarcia_English.pdf";
-import cvEs from "../../../files/AlfredoRamosGarcia_Spanish.pdf";
 import Hobbies from "../portfolio/Hobbies.astro";
 import Tools from "../portfolio/Tools.astro";
 import Button from "../ui/Button.astro";
@@ -104,11 +102,11 @@ const {
                         options={[
                             {
                                 label: "Spanish CV",
-                                url: cvEs,
+                                url: "/files/AlfredoRamosGarcia_Spanish.pdf",
                             },
                             {
                                 label: "English CV",
-                                url: cvEn,
+                                url: "/files/AlfredoRamosGarcia_English.pdf",
                             },
                         ]}
                     />
