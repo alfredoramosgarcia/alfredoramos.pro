@@ -2,14 +2,14 @@
 layout:  /src/layouts/ProjectLayout.astro
 title: 'alfredoramos.pro'
 pubDate: 2025-08-05
-description: 'alfredoramos.pro is a modern, minimalist template crafted for developers and digital creatives.'
+description: 'alfredoramos.pro is a modern and minimalist portfolio designed to showcase my work as a developer and digital creative'
 languages: ["astro", "tailwind", "javascript","vercel"]
 image:
   url: "/images/projects/alfredoramospro.png"
   alt: "Thumbnail of Astro arches."
 ---
 
-**alfredoramos.pro** is a modern, minimalist web template created for developers, designers, and digital creatives. This project aims to offer an elegant and functional visual experience, combining a dark-toned aesthetic with mint green accents to highlight content without distractions.
+**alfredoramos.pro** is a modern and minimalist portfolio designed to showcase my work as a developer and digital creative. This project aims to offer an elegant and functional visual experience, combining a dark-toned aesthetic with mint green accents to highlight content without distractions.
 
 Developed with **Astro** and styled with **TailwindCSS**, NeonMint focuses on speed, modularity, and a component-centered architecture.
 
