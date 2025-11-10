@@ -4,70 +4,64 @@ import Heading from "../ui/Heading.astro";
 import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCE = [
-    {
-        date: "sept. 2025 - Present",
-        title: "Cybersecurity Intern",
-        company: "Alten Spain",
-        description:
-            "Cybersecurity Intern involved in network analysis and secure software development for Telefonica",
-    },
-    {
-        date: "dic. 2023 - Present",
-        title: "Software Engineer",
-        company: "Alten Spain",
-        description:
-            "Software Engineering Consultant in the Aerospace and Defense sector for Navantia. Also, Full-stack Software Engineer for a logistics order tracking product",
-    },
-    {
-        date: "jun. 2023 - dic. 2023",
-        title: "Development Intern",
-        company: "Alten Spain",
-        description:
-            "Contributed to software development for projects such as C4IP and Digital Twin. Assisted in writing technical documentation and participated in agile development within multidisciplinary teams.",
-    },
-    {
-        date: "mar. 2023 - jun. 2023",
-        title: "Development Intern",
-        company: "Surcontrol S.L",
-        description:
-            "Developed software in a production environment. Participated in testing and debugging industrial software tools.",
-    },
+	{
+		date: "dic. 2023 - Present",
+		title: "Software Engineer",
+		company: "Alten Spain",
+		description:
+			"Software Engineering Consultant in the Aerospace and Defense sector for Navantia. Also, Full-stack Software Engineer for a logistics order tracking product",
+	},
+	{
+		date: "sept. 2025 - nov. 2025",
+		title: "Cybersecurity Intern",
+		company: "Alten Spain",
+		description:
+			"Cybersecurity Intern involved in network analysis and secure software development for Telefonica",
+	},
+	{
+		date: "jun. 2023 - dic. 2023",
+		title: "Development Intern",
+		company: "Alten Spain",
+		description:
+			"Contributed to software development for projects such as C4IP and Digital Twin. Assisted in writing technical documentation and participated in agile development within multidisciplinary teams.",
+	},
+	{
+		date: "mar. 2023 - jun. 2023",
+		title: "Development Intern",
+		company: "Surcontrol S.L",
+		description:
+			"Developed software in a production environment. Participated in testing and debugging industrial software tools.",
+	},
 ];
 ---
 
 <section class="py-8 px-8 max-md:py-4 mb-4 scroll-m-16" id="experience">
-    <div class="flex flex-col pt-8 max-w-4xl mx-auto">
-        <div class="flex gap-4 items-center justify-center">
-            <Icon
-                class="text-3xl dark:text-white text-blacktext"
-                name="briefcase"
-            />
-            <Heading text="Work" textGradient="Experience" level={2} />
-        </div>
+	<div class="flex flex-col pt-8 max-w-4xl mx-auto">
+		<div class="flex gap-4 items-center justify-center">
+			<Icon class="text-3xl dark:text-white text-blacktext" name="briefcase" />
+			<Heading text="Work" textGradient="Experience" level={2} />
+		</div>
 
-        <div
-            class="relative max-md:mt-0 mt-8"
-            aria-label="Professional experience"
-        >
-            <ol class="relative mt-10">
-                {
-                    EXPERIENCE.map((experience, index) => (
-                        <li>
-                            <article
-                                role="article"
-                                aria-labelledby={`experience-title-${index}`}
-                            >
-                                <div
-                                    class="flex flex-col gap-2  text-zinc-00 dark:text-zinc-300 md:col-span-3"
-                                    aria-describedby={`experience-title-${index}`}
-                                >
-                                    <ExperienceItem {...experience} />
-                                </div>
-                            </article>
-                        </li>
-                    ))
-                }
-            </ol>
-        </div>
-    </div>
+		<div class="relative max-md:mt-0 mt-8" aria-label="Professional experience">
+			<ol class="relative mt-10">
+				{
+					EXPERIENCE.map((experience, index) => (
+						<li>
+							<article
+								role="article"
+								aria-labelledby={`experience-title-${index}`}
+							>
+								<div
+									class="flex flex-col gap-2  text-zinc-00 dark:text-zinc-300 md:col-span-3"
+									aria-describedby={`experience-title-${index}`}
+								>
+									<ExperienceItem {...experience} />
+								</div>
+							</article>
+						</li>
+					))
+				}
+			</ol>
+		</div>
+	</div>
 </section>
