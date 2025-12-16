@@ -1,23 +1,24 @@
 ---
 layout: /src/layouts/ProjectLayout.astro
-title: 'WALLETBILL'
+title: 'WalletBill'
 pubDate: 2025-08-05
-description: 'WALLETBILL is a modern platform for personal finance management and visualization, focused on performance, clarity, and user experience.'
+description: 'WalletBill is a modern platform for personal finance management and visualization, focused on performance, clarity, and user experience.'
 languages: ["react", "tailwind", "javascript", "vercel"]
 image:
   url: "/images/projects/walletbill.png"
-  alt: "Preview of the WALLETBILL platform"
+  alt: "Preview of the WalletBill platform"
 ---
 
-## 📌 Overview
-
-**WALLETBILL** is a modern web platform designed to simplify the management, visualization, and control of personal finances. The project focuses on delivering a clear, fast, and accessible experience, allowing users to understand their financial situation at a glance.
+**WalletBIll** is a modern web platform designed to simplify the management, visualization, and control of personal finances. The project focuses on delivering a clear, fast, and accessible experience, allowing users to understand their financial situation at a glance.
 
 The application prioritizes a clean interface, intuitive navigation, and high performance, keeping the focus on the most relevant financial data without unnecessary distractions.
 
+**WalletBill** follows a minimalist design approach, prioritizing readability and clarity of financial information. Visual hierarchy, modern typography, and balanced use of color help reduce cognitive load and make financial tracking more intuitive.
+
 ---
 
-## 🧩 Core Features
+
+## 🧩 Features
 
 - Income and expense management  
 - Clear visualization of financial balance  
@@ -28,8 +29,7 @@ The application prioritizes a clean interface, intuitive navigation, and high pe
 - Scalable foundation for future features  
 
 ---
-
-## 💡 Technology Stack
+## 💡 Technologies used
 
 - **React**  
   Used as the main framework to build a dynamic, component-based interface, enabling smooth interactions and efficient state management.
@@ -48,16 +48,14 @@ The application prioritizes a clean interface, intuitive navigation, and high pe
 
 ---
 
-## 🎨 Design & User Experience
+## 🌐 Demo
 
-WALLETBILL follows a minimalist design approach, prioritizing readability and clarity of financial information. Visual hierarchy, modern typography, and balanced use of color help reduce cognitive load and make financial tracking more intuitive.
+👉 [View live demo](https://www.walletbill.es/)
 
----
 
-## 🎯 Project Goal
 
-The goal of **WALLETBILL** is to provide a solid foundation for a modern personal finance tool by combining scalable frontend architecture with a carefully crafted user experience. The project serves both as a practical solution and as an exploration of best practices in React development and UI/UX design.
+## 🎯 Objective
 
----
+The goal of **WalletBill** is to provide a solid foundation for a modern personal finance tool by combining scalable frontend architecture with a carefully crafted user experience. The project serves both as a practical solution and as an exploration of best practices in React development and UI/UX design.
 
-🚀 *Project developed as part of the WALLETBILL ecosystem*
+🚀 *Developed by Alfredo Ramos.*
