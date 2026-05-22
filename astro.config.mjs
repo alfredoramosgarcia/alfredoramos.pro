@@ -8,7 +8,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: "http://www.alfredoramos.pro/",
+	site: "http://www.alfredoramos.pro",
 	integrations: [preact(), icon(), sitemap({
 		filter: (page) =>
 			!page.includes("/blog/tags") &&
