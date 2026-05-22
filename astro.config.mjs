@@ -8,20 +8,20 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://neonmint.efeele.dev",
-    integrations: [preact(), icon(), sitemap({
-        filter: (page) =>
-            !page.includes("/blog/tags") &&
-            !page.includes("/blog/techs"),
-    }),],
+	site: "http://www.alfredoramos.pro/",
+	integrations: [preact(), icon(), sitemap({
+		filter: (page) =>
+			!page.includes("/blog/tags") &&
+			!page.includes("/blog/techs"),
+	}),],
 
-    vite: {
-        plugins: [tailwindcss()],
-    },
-    markdown: {
-        shikiConfig: {
-            theme: 'github-dark'
-        },
-    },
-    output: "static"
+	vite: {
+		plugins: [tailwindcss()],
+	},
+	markdown: {
+		shikiConfig: {
+			theme: 'github-dark'
+		},
+	},
+	output: "static"
 });
