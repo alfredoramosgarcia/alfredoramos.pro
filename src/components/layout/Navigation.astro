@@ -1,162 +1,44 @@
 ---
-import Social from "../ui/Social.astro";
-import { getCollection } from "astro:content";
-
-const [staticData] = await getCollection("staticData");
-const { github, githubIconName, linkedin, linkedinIconName } = staticData.data;
-
-const { items = [] }: { items: (keyof typeof menu)[] } = Astro.props as {
-    items: (keyof typeof menu)[];
+const { items = [] }: { items: string[] } = Astro.props as { items: string[] };
+const menu: Record<string, { name: string; path: string }> = {
+  home: { name: "Home", path: "/#home" },
+  experience: { name: "Experience", path: "/#experience" },
+  projects: { name: "Projects", path: "/#projects" },
+  contact: { name: "Contact", path: "/#contact" },
 };
-
-const menu = {
-    home: { name: "Home", path: "/#home" },
-    experience: { name: "Experience", path: "/#experience" },
-    projects: { name: "Projects", path: "/#projects" },
-    contact: { name: "Contact", path: "/#contact" },
-};
-
-// Common base classes
-const baseClasses = {
-    nav: "nav-links flex w-full justify-center gap-6 max-md:gap-3 max-md:py-6",
-    link: "px-2 py-2 transition-all hover:text-mint-300 max-md:mx-auto max-md:w-full max-md:px-6 max-md:py-2 ",
-    socialContainer: "flex items-center justify-center gap-5 md:hidden",
-    dropdown: "relative group flex items-center",
-    dropdownMenu:
-        "absolute left-0 top-full hidden group-hover:block bg-white dark:bg-zinc-800 shadow-lg rounded-md py-2 min-w-[200px] z-50",
-    dropdownItem:
-        "block px-4 py-2 text-sm hover:bg-mint-100 dark:hover:bg-zinc-700 transition-colors",
-} as const;
 ---
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const isHome = window.location.pathname === "/";
-
-        // Classes for link states
-        const linkClasses = {
-            active: [
-                "text-mint-500",
-                "dark:text-mint-400",
-                "font-bold",
-                "[text-shadow:1px_1px_11px_rgba(208,251,229,0.7)]",
-            ],
-            inactive: ["dark:text-zinc-300", "text-blacktext"],
-        };
-
-        function toggleLinkClasses(link: Element, isActive: boolean) {
-            if (isActive) {
-                link.classList.add(...linkClasses.active);
-                link.classList.remove(...linkClasses.inactive);
-                link.setAttribute("aria-current", "page");
-            } else {
-                link.classList.remove(...linkClasses.active);
-                link.classList.add(...linkClasses.inactive);
-                link.removeAttribute("aria-current");
-            }
-        }
-
-        function updateActiveLink() {
-            const currentPath = window.location.pathname;
-            const currentHash = window.location.hash
-                ? `#${window.location.hash.substring(1)}`
-                : "";
-
-            document.querySelectorAll("nav a").forEach((link) => {
-                const path = link.getAttribute("data-path");
-                toggleLinkClasses(
-                    link,
-                    path === currentPath || path === currentHash,
-                );
-            });
-        }
-
-        function setupScrollSpy() {
-            if (!isHome) return;
-
-            const sections = document.querySelectorAll("section[id]");
-            const navLinks = document.querySelectorAll("nav a");
-
-            const observerOptions = {
-                root: null,
-                rootMargin: "-50% 0px",
-                threshold: 0,
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const sectionId = entry.target.getAttribute("id");
-                        if (sectionId) {
-                            navLinks.forEach((link) => {
-                                const path = link.getAttribute("data-path");
-                                toggleLinkClasses(
-                                    link,
-                                    path === `/#${sectionId}`,
-                                );
-                            });
-                        }
-                    }
-                });
-            }, observerOptions);
-
-            sections.forEach((section) => observer.observe(section));
-        }
-
-        updateActiveLink();
-        setupScrollSpy();
-        window.addEventListener("hashchange", updateActiveLink);
-    });
-</script>
-
-<nav class={baseClasses.nav} role="navigation" aria-label="Main Navigation">
-    {
-        items.map((key: string) => {
-            const item = menu[key as keyof typeof menu];
-            if (!item) return null;
-
-            if ("dropdown" in item) {
-                return (
-                    <div class={baseClasses.dropdown}>
-                        <a
-                            href={item.path}
-                            class={baseClasses.link}
-                            data-path={item.path}
-                            aria-label={item.name}
-                            aria-current={
-                                item.path === Astro.url.pathname
-                                    ? "page"
-                                    : undefined
-                            }
-                        >
-                            {item.name}
-                        </a>
-                    </div>
-                );
-            }
-
-            return (
-                <a
-                    href={item.path}
-                    class={baseClasses.link}
-                    data-path={item.path}
-                    aria-label={item.name}
-                    aria-current={
-                        item.path === Astro.url.pathname ? "page" : undefined
-                    }
-                >
-                    {item.name}
-                </a>
-            );
-        })
-    }
-
-    <div
-        class={baseClasses.socialContainer}
-        role="group"
-        aria-label="Social Media Links"
-    >
-        <Social link={github} iconName={githubIconName} />
-        <Social link={linkedin} iconName={linkedinIconName} />
-    </div>
+<nav class="nav-links items-center gap-1 rounded-xl border border-zinc-200/80 bg-white/70 p-1 shadow-sm shadow-zinc-950/[0.03] backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/70" aria-label="Main Navigation">
+  {items.map((key) => {
+    const item = menu[key];
+    return (
+      <a href={item.path} data-path={item.path} class="rounded-lg px-3.5 py-2 text-sm font-medium text-zinc-600 transition hover:bg-zinc-100 hover:text-zinc-950 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white">
+        {item.name}
+      </a>
+    );
+  })}
 </nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = Array.from(document.querySelectorAll('.nav-links a[data-path]'));
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const setActive = (id) => {
+      links.forEach((link) => {
+        const active = link.getAttribute('data-path') === `/#${id}`;
+        link.classList.toggle('bg-zinc-100', active);
+        link.classList.toggle('text-zinc-950', active);
+        link.classList.toggle('dark:bg-zinc-800', active);
+        link.classList.toggle('dark:text-white', active);
+        active ? link.setAttribute('aria-current', 'page') : link.removeAttribute('aria-current');
+      });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible?.target.id) setActive(visible.target.id);
+    }, { rootMargin: '-40% 0px -50% 0px', threshold: [0, .25, .5] });
+
+    sections.forEach((section) => observer.observe(section));
+  });
+</script>

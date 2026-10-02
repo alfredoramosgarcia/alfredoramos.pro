@@ -1,44 +1,25 @@
 ---
-import Heading from "../ui/Heading.astro";
-import Button from "../ui/Button.astro";
 import { getCollection } from "astro:content";
-
+import Button from "../ui/Button.astro";
 const [staticData] = await getCollection("staticData");
-const {
-	contactSectionTitle,
-	contactSectionSubtitle,
-	contactSectionButtonText,
-	email,
-	contactSectionButtonIcon,
-} = staticData.data;
+const { email, linkedin } = staticData.data;
 ---
 
-<section id="contact">
-	<div
-		class="w-full border-b bg-linear-to-b from-mint-100 to-transparent dark:from-mint-800 dark:border-mint-950 border-mint-100"
-	>
-		<div class="mx-auto max-w-5xl px-8 py-24 max-sm:py-12">
-			<div
-				class="flex items-center justify-between max-sm:flex-col max-sm:gap-8 max-sm:text-center"
-			>
-				<div class="max-w-lg">
-					<Heading
-						text={contactSectionTitle}
-						textGradient={contactSectionSubtitle}
-						level={2}
-					/>
-				</div>
-				<div
-					class="transition-all duration-500 group-hover:animate-jump group-hover:animate-duration-[300ms] group-hover:animate-ease-in-out group-hover:scale-105 hover:scale-125"
-				>
-					<Button
-						variant="big"
-						link={`mailto:${email}`}
-						text={contactSectionButtonText}
-						iconName={contactSectionButtonIcon}
-					/>
-				</div>
-			</div>
-		</div>
-	</div>
+<section id="contact" class="scroll-m-24 px-6 pb-10 pt-8 lg:px-8 lg:pb-16">
+  <div class="relative isolate mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-zinc-800/90 bg-zinc-950 px-7 py-12 text-white shadow-2xl shadow-zinc-950/10 sm:px-10 sm:py-14 lg:px-14 lg:py-16 dark:border-zinc-800">
+    <div class="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(50rem_30rem_at_80%_-20%,rgba(37,99,235,0.34),transparent_72%),radial-gradient(35rem_24rem_at_-5%_110%,rgba(14,165,233,0.12),transparent_74%)]"></div>
+    <div class="pointer-events-none absolute inset-0 -z-10 opacity-[0.13] [background-image:linear-gradient(to_right,rgba(255,255,255,.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,.12)_1px,transparent_1px)] [background-size:64px_64px] [mask-image:linear-gradient(to_right,transparent,black_25%,black_85%,transparent)]"></div>
+    <div class="pointer-events-none absolute inset-x-14 top-0 h-px bg-gradient-to-r from-transparent via-blue-400/70 to-transparent"></div>
+    <div class="relative grid items-end gap-10 lg:grid-cols-[1fr_auto]">
+      <div class="max-w-3xl">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-blue-400">Let's build something useful</p>
+        <h2 class="mt-4 text-4xl font-bold tracking-[-0.045em] sm:text-5xl">Looking for a software engineer who cares about both code and product?</h2>
+        <p class="mt-5 max-w-2xl text-base leading-7 text-zinc-400">I'm open to engineering opportunities, especially international teams where I can keep growing in backend, full-stack, cloud and security.</p>
+      </div>
+      <div class="flex flex-wrap gap-3 lg:justify-end">
+        <Button link={`mailto:${email}`} text="Email me" iconName="envelope" />
+        <Button link={linkedin} text="LinkedIn" iconName="linkedin" variant="dark" isExternal={true} class="!border-zinc-700 !bg-zinc-900 !text-white hover:!bg-zinc-800" />
+      </div>
+    </div>
+  </div>
 </section>

@@ -2,7 +2,7 @@
 	"profileImage": "/foto.jpg",
 	"profileAlt": "Photo of Alfredo Ramos",
 	"profileLink": "/",
-	"profileTitle": "Cybersecurity & Software Engineer",
+	"profileTitle": "Software Engineer",
 	"profileName": "Alfredo Ramos",
 	"github": "https://github.com/alfredoramosgarcia",
 	"githubText": "Do you like this blog's design?",
@@ -30,9 +30,9 @@
 		"Movies"
 	],
 	"pageTitle": "Alfredo Ramos' site",
-	"pageDescription": "is a modern and minimalist portfolio designed to showcase my work as a developer and digital creative",
+	"pageDescription": "Software engineer focused on reliable products, systems and security. Experience across aerospace, defence, logistics and cybersecurity.",
 	"OGImage": {
-		"url": "/images/imagedefault.webp",
-		"alt": ""
+		"url": "/images/projects/alfredoramospro.png",
+		"alt": "Alfredo Ramos software engineer portfolio"
 	}
 }

@@ -7,128 +7,60 @@ import Navigation from "./Navigation.astro";
 
 const [staticData] = await getCollection("staticData");
 const { github, githubIconName, linkedin, linkedinIconName } = staticData.data;
-
 const navItems = ["home", "experience", "projects", "contact"];
 ---
 
-<header
-    role="banner"
-    aria-label="Main navigation"
-    class="sticky top-0 z-50 w-full p-4 font-medium text-blacktext dark:text-zinc-300 dark:bg-[#0E0E11]/80 dark:border-b dark:border-zinc-800 bg-white/90 backdrop-blur-xs dark:backdrop-blur-xs max-md:z-50 max-md:px-0 transition-all"
->
-    <div
-        class="relative mx-auto flex max-w-7xl flex-row items-center justify-between max-xl:px-6"
-    >
-        <a href="/" aria-label="Go to home">
-            <Icon
-                name="logo"
-                class="w-20 h-20 cursor-pointer transition-all hover:text-mint-300"
-                aria-hidden="true"
-            />
-        </a>
+<header class="sticky top-0 z-50 w-full border-b border-zinc-200/70 bg-white/70 shadow-[0_1px_0_rgba(255,255,255,0.55)_inset] backdrop-blur-2xl dark:border-zinc-800/70 dark:bg-[#09090b]/70 dark:shadow-[0_1px_0_rgba(255,255,255,0.025)_inset]" role="banner">
+  <div class="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 lg:px-8">
+    <a href="/#home" class="inline-flex items-center gap-3" aria-label="Alfredo Ramos — Home">
+      <Icon name="logo" class="size-11 text-zinc-950 dark:text-white" aria-hidden="true" />
+      <span class="hidden text-sm font-bold tracking-tight text-zinc-950 sm:block dark:text-white">Alfredo Ramos</span>
+    </a>
 
-        <Navigation items={navItems} />
+    <Navigation items={navItems} />
 
-        <div class="flex items-center justify-between gap-5 text-xl">
-            <div
-                class="max-md:hidden flex items-center justify-center gap-5"
-                role="group"
-            >
-                <Social link={github} iconName={githubIconName} />
-                <Social link={linkedin} iconName={linkedinIconName} />
-            </div>
-        </div>
-        <div class="flex items-center gap-5 text-xl md:pl-5">
-            <ThemeIcon />
-            <button
-                id="hamburger-btn"
-                type="button"
-                class="hamburger md:hidden"
-                aria-label="Open menu"
-                aria-expanded="false"
-                aria-controls="mobile-menu"
-            >
-                <Icon
-                    name="bars"
-                    class="hamburger-icon bars-icon"
-                    aria-hidden="true"
-                />
-                <Icon
-                    name="xmark"
-                    class="hamburger-icon xmark-icon"
-                    aria-hidden="true"
-                />
-            </button>
-
-            <!-- Desplegable móvil -->
-            <nav
-                id="mobile-menu"
-                hidden
-                class="absolute right-0 top-full mt-2 w-[min(92vw,20rem)] rounded-xl border bg-white/95 p-3 shadow-lg ring-1 ring-black/5 md:hidden dark:bg-zinc-900/95"
-            >
-                <ul
-                    class="flex flex-col divide-y divide-black/5 dark:divide-white/10"
-                >
-                    {
-                        navItems.map((item) => (
-                            <li>
-                                <a
-                                    href={`#${item}`}
-                                    class="block px-3 py-2 capitalize hover:underline"
-                                    onClick="document.getElementById('hamburger-btn').setAttribute('aria-expanded', 'false'); document.getElementById('mobile-menu').setAttribute('hidden','');"
-                                >
-                                    {item}
-                                </a>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </nav>
-        </div>
+    <div class="flex items-center gap-1">
+      <div class="hidden items-center md:flex">
+        <Social link={github} iconName={githubIconName} label="GitHub" />
+        <Social link={linkedin} iconName={linkedinIconName} label="LinkedIn" />
+      </div>
+      <ThemeIcon />
+      <button id="hamburger-btn" type="button" class="ml-1 inline-flex size-9 items-center justify-center rounded-lg text-zinc-600 transition hover:bg-zinc-100 hover:text-zinc-950 md:hidden dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <Icon name="bars" class="bars-icon size-5" aria-hidden="true" />
+        <Icon name="xmark" class="xmark-icon hidden size-5" aria-hidden="true" />
+      </button>
     </div>
+
+    <nav id="mobile-menu" hidden class="absolute left-4 right-4 top-[calc(100%+0.5rem)] rounded-2xl border border-zinc-200/80 bg-white/90 p-2 shadow-2xl shadow-zinc-950/10 backdrop-blur-2xl md:hidden dark:border-zinc-800 dark:bg-zinc-900/90">
+      {navItems.map((item) => (
+        <a href={`/#${item}`} class="block rounded-xl px-4 py-3 text-sm font-medium capitalize text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800">{item}</a>
+      ))}
+      <div class="mt-1 flex border-t border-zinc-100 px-2 pt-2 dark:border-zinc-800">
+        <Social link={github} iconName={githubIconName} label="GitHub" />
+        <Social link={linkedin} iconName={linkedinIconName} label="LinkedIn" />
+      </div>
+    </nav>
+  </div>
 </header>
 
-<script type="module">
-    const btn = document.getElementById("hamburger-btn");
-    const menu = document.getElementById("mobile-menu");
+<script>
+  const btn = document.getElementById('hamburger-btn');
+  const menu = document.getElementById('mobile-menu');
+  const bars = btn?.querySelector('.bars-icon');
+  const xmark = btn?.querySelector('.xmark-icon');
 
-    if (btn && menu) {
-        // Estado inicial sincronizado
-        const sync = () => {
-            const isOpen = btn.getAttribute("aria-expanded") === "true";
-            if (isOpen) menu.removeAttribute("hidden");
-            else menu.setAttribute("hidden", "");
-        };
+  const setOpen = (open) => {
+    if (!btn || !menu) return;
+    btn.setAttribute('aria-expanded', String(open));
+    menu.toggleAttribute('hidden', !open);
+    bars?.classList.toggle('hidden', open);
+    xmark?.classList.toggle('hidden', !open);
+  };
 
-        const closeMenu = () => {
-            btn.setAttribute("aria-expanded", "false");
-            menu.setAttribute("hidden", "");
-        };
-
-        const openMenu = () => {
-            btn.setAttribute("aria-expanded", "true");
-            menu.removeAttribute("hidden");
-        };
-
-        btn.addEventListener("click", () => {
-            const isOpen = btn.getAttribute("aria-expanded") === "true";
-            isOpen ? closeMenu() : openMenu();
-        });
-
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") closeMenu();
-        });
-
-        document.addEventListener("click", (e) => {
-            if (
-                !menu.hidden &&
-                !btn.contains(e.target) &&
-                !menu.contains(e.target)
-            ) {
-                closeMenu();
-            }
-        });
-
-        sync(); // asegura estado inicial correcto
-    }
+  btn?.addEventListener('click', () => setOpen(btn.getAttribute('aria-expanded') !== 'true'));
+  menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') setOpen(false); });
+  document.addEventListener('click', (event) => {
+    if (menu && btn && !menu.hidden && !menu.contains(event.target) && !btn.contains(event.target)) setOpen(false);
+  });
 </script>

@@ -9,14 +9,14 @@ image:
   alt: "Thumbnail of Astro arches."
 ---
 
-**alfredoramos.pro** is a modern and minimalist portfolio designed to showcase my work as a developer and digital creative. This project aims to offer an elegant and functional visual experience, combining a dark-toned aesthetic with mint green accents to highlight content without distractions.
+**alfredoramos.pro** is a modern and minimalist portfolio designed to showcase my work as a developer and digital creative. This project aims to offer an elegant and functional visual experience, combining a clean light/dark aesthetic with restrained blue accents to highlight content without distractions.
 
-Developed with **Astro** and styled with **TailwindCSS**, NeonMint focuses on speed, modularity, and a component-centered architecture.
+Developed with **Astro** and styled with **TailwindCSS**, The portfolio focuses on speed, modularity, accessibility, and a component-centered architecture.
 
 ## 🧩 Features
 
 - Responsive and minimalist design
-- Dark mode aesthetic with mint green accents
+- Light and dark themes with restrained blue accents
 - Clean and reusable UI components
 - Ideal for portfolios, dashboards or tech landing pages
 - Modern typography and clear visual hierarchy

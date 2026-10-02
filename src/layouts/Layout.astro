@@ -2,79 +2,80 @@
 import "../styles/global.css";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
+import Background from "../components/layout/Background.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
+
 const {
-    pageTitle = "Alfredo Ramos' site",
-    description = "Welcome to Alfredo Ramos' site, where I develop software and share knowledge.",
-    ogimage = {
-        url: "/images/projects/alfredoramospro.png",
-        alt: "Default image of Alfredo Ramos",
-    },
+	pageTitle = "Alfredo Ramos' site",
+	description = "Software engineer focused on reliable products, systems and security.",
+	ogimage = {
+		url: "/images/projects/alfredoramospro.png",
+		alt: "Alfredo Ramos portfolio",
+	},
 } = Astro.props;
 
 const siteUrl = new URL(Astro.url).origin;
-const SEO = {
-    sitename: "Alfredo Ramos' site",
-    url: siteUrl,
-    locale: "es_ES",
-    author: "Alfredo Ramos",
-};
-
-const twitterimage = `${siteUrl}${ogimage.url}`;
+const canonical = Astro.site
+	? new URL(Astro.url.pathname, Astro.site).toString()
+	: Astro.url.toString();
 ---
 
 <html
-    lang="en"
-    class="dark:bg-[#0E0E11] bg-mint-50/5 font-montserrat scroll-smooth"
+	lang="en"
+	class="scroll-smooth bg-[#fafafa] font-montserrat antialiased dark:bg-[#09090b]"
 >
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>{pageTitle}</title>
-        <!-- Favicon for different platforms -->
-        <link rel="icon" href="/logo.png" sizes="32x32" />
-        <link rel="icon" href="/logo.png" sizes="16x16" />
-        <link rel="apple-touch-icon" href="/logo.png" />
-        <link rel="icon" href="/logo.png" sizes="192x192" />
-        <link rel="icon" href="/logo.png" sizes="512x512" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{pageTitle}</title>
+		<meta name="description" content={description} />
+		<meta name="author" content="Alfredo Ramos" />
+		<meta name="robots" content="index, follow" />
+		<meta
+			name="theme-color"
+			content="#fafafa"
+			media="(prefers-color-scheme: light)"
+		/>
+		<meta
+			name="theme-color"
+			content="#09090b"
+			media="(prefers-color-scheme: dark)"
+		/>
+		<link rel="canonical" href={canonical} />
 
-        <!-- Web manifest -->
-        <link rel="manifest" href="/site.webmanifest" />
+		<link rel="icon" href="/logo.png" sizes="32x32" />
+		<link rel="apple-touch-icon" href="/logo.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 
-        <meta name="description" content={description} />
-        <meta name="author" content={SEO.author} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`${Astro.site}${Astro.url.pathname}`} />
-        <!-- Open Graph / Facebook -->
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogimage.url} />
-        <meta property="og:image:alt" content={ogimage.alt} />
-        <meta property="og:url" content={SEO.url} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content={SEO.sitename} />
-        <meta property="og:locale" content={SEO.locale} />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={`${siteUrl}${ogimage.url}`} />
+		<meta property="og:image:alt" content={ogimage.alt} />
+		<meta property="og:url" content={Astro.url.toString()} />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Alfredo Ramos" />
+		<meta property="og:locale" content="en_GB" />
 
-        <!-- Sitemap -->
-        <link rel="sitemap" href="/sitemap-index.xml" />
-    </head>
-    <body class="overflow-x-hidden">
-        <SpeedInsights />
-        <div class="blur-circle"></div>
-        <div
-            style="  background:linear-gradient(45deg, rgba(96, 250, 155, 0) 10.79%, rgba(96, 250, 170, 0.03) 40.92%, rgba(96, 250, 155, 0) 90.35%)"
-            class="fixed top-0 left-0 w-full h-full pointer-events-none -z-1"
-        >
-        </div>
-        <Header />
-
-        <div class="min-h-[85vh]">
-            <slot />
-        </div>
-
-        <Footer />
-        <script>
-            import "../scripts/menu.js";
-        </script>
-    </body>
+		<script is:inline>
+			(() => {
+				const stored = localStorage.getItem("theme");
+				const dark = stored
+					? stored === "dark"
+					: window.matchMedia("(prefers-color-scheme: dark)").matches;
+				document.documentElement.classList.toggle("dark", dark);
+			})();
+		</script>
+	</head>
+	<body
+		class="min-h-screen overflow-x-hidden bg-[#fafafa] text-zinc-950 selection:bg-blue-600 selection:text-white dark:bg-[#09090b] dark:text-zinc-100"
+	>
+		<SpeedInsights />
+		<Background />
+		<div class="relative z-10 min-h-screen">
+			<Header />
+			<main><slot /></main>
+			<Footer />
+		</div>
+	</body>
 </html>

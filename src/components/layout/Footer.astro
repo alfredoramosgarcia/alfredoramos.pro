@@ -1,54 +1,18 @@
 ---
 import Social from "../ui/Social.astro";
-import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
-
 const [staticData] = await getCollection("staticData");
-const {
-  github,
-  alias,
-  email,
-  linkedin,
-  emailIconName,
-  linkedinIconName,
-  githubIconName,
-} = staticData.data;
+const { github, email, linkedin, emailIconName, linkedinIconName, githubIconName } = staticData.data;
+const year = new Date().getFullYear();
 ---
 
-<footer
-  class="relative bottom-0 w-full px-4 py-8 font-medium text-blacktext dark:bg-transparent dark:border-b-2 dark:border-zinc-800 dark:text-zinc-300 max-lg:mt-3"
-  role="contentinfo"
-  aria-label="Site footer"
->
-  <nav
-    class="mx-auto flex max-w-7xl flex-row items-center justify-between gap-4 text-xl max-xl:px-6 max-sm:flex-col"
-    aria-label="Footer navigation"
-  >
-    <div
-      class="relative h-6 cursor-pointer before:absolute before:left-1/2 before:top-1/2 before:h-full before:w-[40%] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-[#50fd8f25] before:blur-3xl before:opacity-80 before:-z-1 hover:text-mint-500 transition-all [text-shadow:0_1px_2px_#000]"
-    >
+<footer class="px-6 py-8 lg:px-8" role="contentinfo">
+  <div class="mx-auto flex max-w-7xl flex-col gap-5 border-t border-zinc-200/75 pt-8 sm:flex-row sm:items-center sm:justify-between dark:border-zinc-800/80">
+    <p class="text-sm text-zinc-500">© {year} Alfredo Ramos. Built with Astro.</p>
+    <div class="flex items-center gap-1">
+      <Social link={`mailto:${email}`} iconName={emailIconName} label="Email Alfredo Ramos" />
+      <Social link={github} iconName={githubIconName} label="GitHub" />
+      <Social link={linkedin} iconName={linkedinIconName} label="LinkedIn" />
     </div>
-    <div class="text-center">
-    <div
-      class="flex items-center justify-center gap-5"
-      role="group"
-      aria-label="Social media links"
-    >
-      <Social
-        link={`mailto:${email}`}
-        iconName={emailIconName}
-        label={`Send email to ${email}`}
-      />
-      <Social
-        link={github}
-        iconName={githubIconName}
-        label={`Visit ${alias} on GitHub`}
-      />
-      <Social
-        link={linkedin}
-        iconName={linkedinIconName}
-        label={`Visit ${alias} on LinkedIn`}
-      />
-    </div>
-  </nav>
+  </div>
 </footer>

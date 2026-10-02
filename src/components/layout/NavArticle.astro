@@ -2,91 +2,49 @@
 const { title } = Astro.props;
 ---
 
-<div class="max-xl:hidden  ">
-  <div id="nav-content" class="bg-white dark:bg-transparent sticky w-72 mt-8 rounded-2xl dark:border-0 border border-neutral-100 top-14 max-h-[calc(100svh-3.5rem)] overflow-x-hidden px-6 pt-8 pb-12">
-    <div class="flex flex-col gap-4 pl-0">
-      <div>
-        <h3 class="dark:text-zinc-400 text-blacktext/90 font-black tracking-wide text-md uppercase">Table of Contents</h3>
-      </div>
-      <div class="flex flex-col gap-2 pr-6 text-neutral-500 dark:text-neutral-300 ">
-        <ul id="toc-list" class="leading-loose text-base gap-2 border-l dark:border-neutral-500/20 border-blacktext/20">
-          <li class="leading-loose">
-            <a class="inline-block leading-5 pl-4 font-bold text-white border-l dark:border-white border-blacktext dark:hover:border-white hover:border-blacktext" href="#">{title}</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+<aside class="hidden xl:block">
+  <div class="glass-surface sticky top-28 rounded-2xl p-5">
+    <p class="text-xs font-bold uppercase tracking-[0.15em] text-zinc-400">On this page</p>
+    <ul id="toc-list" class="mt-4 space-y-1 border-l border-zinc-200 pl-3 dark:border-zinc-800">
+      <li><a class="toc-link block rounded-lg px-2 py-1.5 text-sm font-semibold text-zinc-950 dark:text-white" href="#start">{title}</a></li>
+    </ul>
   </div>
-</div>
+</aside>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const tocList = document.getElementById("toc-list");
-    const content = document.getElementById("content");
+  document.addEventListener('DOMContentLoaded', () => {
+    const toc = document.getElementById('toc-list');
+    const content = document.getElementById('content');
+    if (!toc || !content) return;
 
-    if (!tocList || !content) return;
-
-    const headers = content.querySelectorAll("h2, h3");
-    let currentUl = tocList;
-
-    headers.forEach((header, index) => {
-      if (!header.id) {
-        header.id = header.textContent?.trim().toLowerCase().replace(/\s+/g, "-") + "-" + index;
-        // 👈 Add the class
+    const headings = Array.from(content.querySelectorAll('h2, h3'));
+    headings.forEach((heading, index) => {
+      if (!heading.id) {
+        const base = heading.textContent?.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || `section-${index}`;
+        heading.id = `${base}-${index}`;
       }
-
-      const li = document.createElement("li");
-      const link = document.createElement("a");
-      link.href = `#${header.id}`;
-      link.textContent = header.textContent?.trim() || header.id;
-
-      // If the header is H2, keep pl-6, and if it's H3, use pl-12
-      link.classList.add("inline-block","leading-5", "hover:text-mint-400", "py-2", "border-l", "border-transparent", "dark:hover:border-white","hover:border-blacktext");
-      link.classList.add(header.tagName === "H2" ? "pl-6" : "pl-12");
-      console.log("classes removed 2");
+      const li = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = `#${heading.id}`;
+      link.textContent = heading.textContent?.trim() || heading.id;
+      link.className = `toc-link block rounded-lg py-1.5 text-sm leading-5 text-zinc-500 transition hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white ${heading.tagName === 'H3' ? 'pl-5 pr-2' : 'px-2'}`;
       li.appendChild(link);
-
-      if (header.tagName === "H2") {
-        currentUl = document.createElement("ul");
-        currentUl.classList.add("border-neutral-400","dark:hover:border-white","hover:border-blacktext",  "pl-0");
-        console.log("classes removed 3");
-        const h2Li = document.createElement("li");
-        h2Li.appendChild(link);
-        h2Li.appendChild(currentUl);
-        tocList.appendChild(h2Li);
-      } else {
-        currentUl.appendChild(li);
-      }
-
-      // Smooth scroll when clicking on a link
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.getElementById(header.id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
+      toc.appendChild(li);
     });
 
-    // 👇 Detect the active header
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const id = entry.target.getAttribute("id");
-          const link = document.querySelector(`a[href="#${id}"]`);
+    const links = Array.from(toc.querySelectorAll('.toc-link'));
+    const setActive = (id) => links.forEach((link) => {
+      const active = link.getAttribute('href') === `#${id}`;
+      link.classList.toggle('text-blue-600', active);
+      link.classList.toggle('dark:text-blue-400', active);
+      link.classList.toggle('font-semibold', active);
+    });
 
-          if (entry.isIntersecting) {
-            // Remove class from all and add only to the active one
-            document.querySelectorAll("#toc-list a").forEach((el) => {
-              el.classList.remove("font-semibold", "dark:text-mint-300!", "text-blacktext!", "dark:border-white!", "border-blacktext!"  );
-              el.classList.add("dark:text-neutral-300","text-neutral-500" );
-              console.log("classes removed 4");
-            });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => { if (entry.isIntersecting) setActive(entry.target.id); });
+    }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
 
-            link?.classList.add("font-semibold", "dark:text-mint-300!", "text-blacktext!",   "border-l", "dark:border-white!", "border-blacktext!");
-          }
-        });
-      },
-      { rootMargin: "-30% 0px -65% 0px", threshold: 0.1 } // Adjusted to improve visibility
-    );
-
-    headers.forEach((header) => observer.observe(header));
+    document.getElementById('start') && observer.observe(document.getElementById('start'));
+    headings.forEach((heading) => observer.observe(heading));
   });
 </script>
