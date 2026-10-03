@@ -8,7 +8,7 @@ const year = new Date().getFullYear();
 
 <footer class="px-6 py-8 lg:px-8" role="contentinfo">
   <div class="mx-auto flex max-w-7xl flex-col gap-5 border-t border-zinc-200/75 pt-8 sm:flex-row sm:items-center sm:justify-between dark:border-zinc-800/80">
-    <p class="text-sm text-zinc-500">© {year} Alfredo Ramos. Built with Astro.</p>
+    <p class="text-sm text-zinc-500">© {year} Alfredo Ramos. <span data-i18n="footer.built">Built with Astro.</span></p>
     <div class="flex items-center gap-1">
       <Social link={`mailto:${email}`} iconName={emailIconName} label="Email Alfredo Ramos" />
       <Social link={github} iconName={githubIconName} label="GitHub" />

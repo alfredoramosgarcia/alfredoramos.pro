@@ -1,0 +1,710 @@
+{
+	"en": {
+		"meta": {
+			"homeTitle": "Alfredo Ramos",
+			"homeDescription": "Software engineer focused on reliable products, systems and security. Experience across aerospace, defence, logistics and cybersecurity.",
+			"homeOgAlt": "Alfredo Ramos software engineer portfolio"
+		},
+		"language": {
+			"selectorAria": "Change language",
+			"menuAria": "Language options"
+		},
+		"theme": {
+			"toggle": "Toggle color theme"
+		},
+		"header": {
+			"homeAria": "Alfredo Ramos — Home",
+			"openMenu": "Open menu"
+		},
+		"nav": {
+			"label": "Main navigation",
+			"home": "Home",
+			"experience": "Experience",
+			"projects": "Projects",
+			"contact": "Contact"
+		},
+		"hero": {
+			"aria": "Professional profile and introduction",
+			"availability": "Open to international opportunities",
+			"location": "Software Engineer · Spain",
+			"headlineHtml": "I build reliable software with a focus on <span class=\"text-blue-600 dark:text-blue-400\">product, systems and security.</span>",
+			"intro": "I'm Alfredo Ramos, a software engineer with 3+ years of experience working across aerospace, defence and logistics. I enjoy turning complex requirements into clear, maintainable products and I'm growing toward senior international roles.",
+			"talk": "Let's talk",
+			"downloadCv": "Download CV",
+			"years": "Years building",
+			"featuredProjects": "Featured projects",
+			"workingLanguages": "Working languages",
+			"role": "Software Engineer",
+			"linkedinAria": "LinkedIn profile",
+			"coreStack": "Core stack",
+			"coreStackSubtitle": "Technologies I work with",
+			"currentFocus": "Current focus",
+			"currentFocusText": "System design, cloud-native development, cybersecurity and stronger engineering fundamentals.",
+			"beyondCode": "Beyond code"
+		},
+		"hobbies": {
+			"writing": "Writing",
+			"sports": "Sports",
+			"coffee": "Coffee",
+			"music": "Music",
+			"movies": "Movies"
+		},
+		"experience": {
+			"eyebrow": "Experience",
+			"heading": "Engineering in real-world environments.",
+			"intro": "From industrial software to aerospace, defence, logistics and cybersecurity, my experience has been shaped by complex systems and multidisciplinary teams.",
+			"aria": "Professional experience",
+			"current": "Current",
+			"item1": {
+				"date": "Dec 2023 — Present",
+				"title": "Software Engineer",
+				"description": "Software engineering consultant in the aerospace and defence sector for Navantia, while also contributing as a full-stack engineer to a logistics order-tracking product."
+			},
+			"item2": {
+				"date": "Sep 2025 — Nov 2025",
+				"title": "Cybersecurity Intern",
+				"description": "Worked on network analysis and secure software development activities for Telefónica, expanding my engineering background with practical security experience."
+			},
+			"item3": {
+				"date": "Jun 2023 — Dec 2023",
+				"title": "Development Intern",
+				"description": "Contributed to software projects including C4IP and Digital Twin initiatives, technical documentation and agile delivery within multidisciplinary teams."
+			},
+			"item4": {
+				"date": "Mar 2023 — Jun 2023",
+				"title": "Development Intern",
+				"description": "Developed, tested and debugged software in a production-oriented industrial environment."
+			}
+		},
+		"projects": {
+			"eyebrow": "Selected work",
+			"heading": "Projects built to solve, learn and ship.",
+			"intro": "A selection of products where I combine engineering, UI decisions and real deployment. Open a project to see the stack and implementation details.",
+			"caseStudy": "Case study",
+			"alfredoramospro": {
+				"description": "alfredoramos.pro is a modern, minimalist portfolio designed to showcase my work as a software engineer and digital creator.",
+				"contentHtml": "<p><strong>alfredoramos.pro</strong> is a modern, minimalist portfolio designed to showcase my work as a software engineer and digital creator. It combines a clean light/dark visual system with restrained blue accents so the work stays at the center of the experience.</p>\n<p>Built with <strong>Astro</strong> and styled with <strong>Tailwind CSS</strong>, the portfolio focuses on speed, modularity, accessibility and a component-driven architecture.</p>\n<h2>🧩 Features</h2>\n<ul>\n<li>Responsive and minimalist interface</li>\n<li>Light and dark themes with restrained blue accents</li>\n<li>Reusable, accessible UI components</li>\n<li>Clear typography and visual hierarchy</li>\n<li>Fast static delivery with Astro</li>\n<li>Styling with Tailwind CSS</li>\n</ul>\n<h2>💡 Technologies used</h2>\n<ul><li>Astro</li><li>Tailwind CSS</li><li>HTML5</li><li>JavaScript</li><li>Vercel</li></ul>\n<h2>🌐 Demo</h2>\n<p>👉 <a href=\"https://alfredoramos.pro/\">View live demo</a></p>\n<h2>🎯 Objective</h2>\n<p>The goal of <strong>alfredoramos.pro</strong> is to combine engineering, design and personal branding in a fast, focused interface that presents my experience and projects without unnecessary visual noise.</p>\n<p>🚀 <em>Developed by Alfredo Ramos.</em></p>"
+			},
+			"sanJuan": {
+				"description": "sanJuan is the official website for the launch of my latest music album, combining its concept, visuals, tracklist and streaming links in an immersive experience.",
+				"contentHtml": "<p><strong>sanJuan</strong> is the official website for the launch of <em>San Juan</em>, my latest music album. The experience presents the album's concept, tracklist, visual identity and streaming links through an immersive, focused interface.</p>\n<p>Built with <strong>Next.js</strong> and <strong>TypeScript</strong>, sanJuan uses a component-based frontend architecture designed for fast navigation and a strong visual identity.</p>\n<h2>🧩 Features</h2>\n<ul>\n<li>Responsive, editorial-style design</li>\n<li>Album concept and visual storytelling</li>\n<li>Tracklist and streaming links</li>\n<li>Modern typography and clear hierarchy</li>\n<li>Component-based development with Next.js</li>\n</ul>\n<h2>💡 Technologies used</h2>\n<ul><li>Next.js</li><li>TypeScript</li><li>HTML5</li><li>CSS</li><li>Vercel</li></ul>\n<h2>🌐 Demo</h2>\n<p>👉 <a href=\"https://www.estoessanjuan.es/\">View live demo</a></p>\n<h2>🎯 Objective</h2>\n<p>The project translates the album's artistic identity into a digital experience that is fast, memorable and easy to explore across devices.</p>\n<p>🚀 <em>Developed by Alfredo Ramos.</em></p>"
+			},
+			"walletbill": {
+				"description": "WalletBill is a modern platform for personal finance management and visualization, focused on performance, clarity and user experience.",
+				"contentHtml": "<p><strong>WalletBill</strong> is a modern web platform designed to simplify the management, visualization and control of personal finances. It helps users understand their financial situation at a glance through a clear, fast and accessible interface.</p>\n<p>The product prioritizes intuitive navigation, high performance and a strong visual hierarchy, keeping attention on the most relevant financial data without unnecessary distractions.</p>\n<h2>🧩 Features</h2>\n<ul>\n<li>Income and expense management</li>\n<li>Clear visualization of financial balance</li>\n<li>Transactions organized by category</li>\n<li>Dynamic and reactive user interface</li>\n<li>Responsive design for all devices</li>\n<li>Reusable components for consistent UI</li>\n<li>Scalable foundation for future features</li>\n</ul>\n<h2>💡 Technologies used</h2>\n<h3>React</h3><p>Used to build a dynamic, component-based interface with smooth interactions and efficient state management.</p>\n<h3>Tailwind CSS</h3><p>Provides a utility-first styling system that supports visual consistency, rapid development and maintainability.</p>\n<h3>JavaScript</h3><p>Handles application logic, state and interactive behavior.</p>\n<h3>Vercel</h3><p>Used for deployment and hosting with continuous delivery and reliable performance.</p>\n<h2>🌐 Demo</h2>\n<p>👉 <a href=\"https://www.walletbill.es/\">View live demo</a></p>\n<h2>🎯 Objective</h2>\n<p>The goal of <strong>WalletBill</strong> is to provide a solid foundation for a modern personal-finance product by combining scalable frontend architecture with a carefully designed user experience.</p>\n<p>🚀 <em>Developed by Alfredo Ramos.</em></p>"
+			}
+		},
+		"project": {
+			"back": "Back to projects",
+			"onPage": "On this page"
+		},
+		"contact": {
+			"eyebrow": "Let's build something useful",
+			"heading": "Looking for a software engineer who cares about both code and product?",
+			"intro": "I'm open to engineering opportunities, especially international teams where I can keep growing in backend, full-stack, cloud and security.",
+			"email": "Email me",
+			"linkedin": "LinkedIn"
+		},
+		"footer": {
+			"built": "Built with Astro."
+		},
+		"cv": {
+			"en": "English CV",
+			"es": "Spanish CV",
+			"fr": "French CV",
+			"de": "German CV",
+			"da": "Danish CV",
+			"zh": "Chinese CV"
+		}
+	},
+	"es": {
+		"meta": {
+			"homeTitle": "Alfredo Ramos",
+			"homeDescription": "Ingeniero de software centrado en productos fiables, sistemas y seguridad. Experiencia en aeroespacial, defensa, logística y ciberseguridad.",
+			"homeOgAlt": "Portfolio de Alfredo Ramos, ingeniero de software"
+		},
+		"language": {
+			"selectorAria": "Cambiar idioma",
+			"menuAria": "Opciones de idioma"
+		},
+		"theme": {
+			"toggle": "Cambiar tema de color"
+		},
+		"header": {
+			"homeAria": "Alfredo Ramos — Inicio",
+			"openMenu": "Abrir menú"
+		},
+		"nav": {
+			"label": "Navegación principal",
+			"home": "Inicio",
+			"experience": "Experiencia",
+			"projects": "Proyectos",
+			"contact": "Contacto"
+		},
+		"hero": {
+			"aria": "Perfil profesional e introducción",
+			"availability": "Abierto a oportunidades internacionales",
+			"location": "Ingeniero de Software · España",
+			"headlineHtml": "Construyo software fiable con foco en <span class=\"text-blue-600 dark:text-blue-400\">producto, sistemas y seguridad.</span>",
+			"intro": "Soy Alfredo Ramos, ingeniero de software con más de 3 años de experiencia en entornos aeroespaciales, de defensa y logística. Me gusta convertir requisitos complejos en productos claros y mantenibles, y sigo creciendo hacia posiciones senior internacionales.",
+			"talk": "Hablemos",
+			"downloadCv": "Descargar CV",
+			"years": "Años desarrollando",
+			"featuredProjects": "Proyectos destacados",
+			"workingLanguages": "Idiomas de trabajo",
+			"role": "Ingeniero de Software",
+			"linkedinAria": "Perfil de LinkedIn",
+			"coreStack": "Stack principal",
+			"coreStackSubtitle": "Tecnologías con las que trabajo",
+			"currentFocus": "Foco actual",
+			"currentFocusText": "Diseño de sistemas, desarrollo cloud-native, ciberseguridad y fundamentos de ingeniería más sólidos.",
+			"beyondCode": "Más allá del código"
+		},
+		"hobbies": {
+			"writing": "Escritura",
+			"sports": "Deporte",
+			"coffee": "Café",
+			"music": "Música",
+			"movies": "Cine"
+		},
+		"experience": {
+			"eyebrow": "Experiencia",
+			"heading": "Ingeniería en entornos reales.",
+			"intro": "Desde software industrial hasta aeroespacial, defensa, logística y ciberseguridad, mi experiencia se ha construido alrededor de sistemas complejos y equipos multidisciplinares.",
+			"aria": "Experiencia profesional",
+			"current": "Actual",
+			"item1": {
+				"date": "Dic 2023 — Actualidad",
+				"title": "Ingeniero de Software",
+				"description": "Consultor de ingeniería de software en el sector aeroespacial y de defensa para Navantia, además de contribuir como ingeniero full-stack a un producto logístico de seguimiento de pedidos."
+			},
+			"item2": {
+				"date": "Sep 2025 — Nov 2025",
+				"title": "Becario de Ciberseguridad",
+				"description": "Trabajé en análisis de redes y actividades de desarrollo seguro de software para Telefónica, ampliando mi perfil de ingeniería con experiencia práctica en seguridad."
+			},
+			"item3": {
+				"date": "Jun 2023 — Dic 2023",
+				"title": "Becario de Desarrollo",
+				"description": "Participé en proyectos de software como C4IP y Digital Twin, documentación técnica y entrega ágil dentro de equipos multidisciplinares."
+			},
+			"item4": {
+				"date": "Mar 2023 — Jun 2023",
+				"title": "Becario de Desarrollo",
+				"description": "Desarrollé, probé y depuré software en un entorno industrial orientado a producción."
+			}
+		},
+		"projects": {
+			"eyebrow": "Trabajo seleccionado",
+			"heading": "Proyectos creados para resolver, aprender y lanzar.",
+			"intro": "Una selección de productos en los que combino ingeniería, decisiones de UI y despliegue real. Abre un proyecto para ver el stack y los detalles de implementación.",
+			"caseStudy": "Caso de estudio",
+			"alfredoramospro": {
+				"description": "alfredoramos.pro es un portfolio moderno y minimalista diseñado para mostrar mi trabajo como ingeniero de software y creador digital.",
+				"contentHtml": "<p><strong>alfredoramos.pro</strong> es un portfolio moderno y minimalista diseñado para mostrar mi trabajo como ingeniero de software y creador digital. Combina un sistema visual limpio en modo claro/oscuro con acentos azules contenidos para que el trabajo siga siendo el centro de la experiencia.</p>\n<p>Desarrollado con <strong>Astro</strong> y estilizado con <strong>Tailwind CSS</strong>, el portfolio se centra en la velocidad, la modularidad, la accesibilidad y una arquitectura basada en componentes.</p>\n<h2>🧩 Funcionalidades</h2>\n<ul>\n<li>Interfaz responsive y minimalista</li>\n<li>Modos claro y oscuro con acentos azules sutiles</li>\n<li>Componentes de UI reutilizables y accesibles</li>\n<li>Tipografía y jerarquía visual claras</li>\n<li>Entrega estática rápida con Astro</li>\n<li>Estilos con Tailwind CSS</li>\n</ul>\n<h2>💡 Tecnologías utilizadas</h2>\n<ul><li>Astro</li><li>Tailwind CSS</li><li>HTML5</li><li>JavaScript</li><li>Vercel</li></ul>\n<h2>🌐 Demo</h2>\n<p>👉 <a href=\"https://alfredoramos.pro/\">Ver demo en vivo</a></p>\n<h2>🎯 Objetivo</h2>\n<p>El objetivo de <strong>alfredoramos.pro</strong> es combinar ingeniería, diseño y marca personal en una interfaz rápida y enfocada que presente mi experiencia y mis proyectos sin ruido visual innecesario.</p>\n<p>🚀 <em>Desarrollado por Alfredo Ramos.</em></p>"
+			},
+			"sanJuan": {
+				"description": "sanJuan es la web oficial de lanzamiento de mi último álbum, combinando concepto, visuales, tracklist y enlaces de streaming en una experiencia inmersiva.",
+				"contentHtml": "<p><strong>sanJuan</strong> es la web oficial de lanzamiento de <em>San Juan</em>, mi último álbum musical. La experiencia presenta el concepto del disco, el tracklist, la identidad visual y los enlaces de streaming mediante una interfaz inmersiva y enfocada.</p>\n<p>Desarrollado con <strong>Next.js</strong> y <strong>TypeScript</strong>, sanJuan utiliza una arquitectura frontend basada en componentes, pensada para una navegación rápida y una identidad visual sólida.</p>\n<h2>🧩 Funcionalidades</h2>\n<ul>\n<li>Diseño responsive de estilo editorial</li>\n<li>Concepto del álbum y narrativa visual</li>\n<li>Tracklist y enlaces de streaming</li>\n<li>Tipografía moderna y jerarquía clara</li>\n<li>Desarrollo basado en componentes con Next.js</li>\n</ul>\n<h2>💡 Tecnologías utilizadas</h2>\n<ul><li>Next.js</li><li>TypeScript</li><li>HTML5</li><li>CSS</li><li>Vercel</li></ul>\n<h2>🌐 Demo</h2>\n<p>👉 <a href=\"https://www.estoessanjuan.es/\">Ver demo en vivo</a></p>\n<h2>🎯 Objetivo</h2>\n<p>El proyecto traslada la identidad artística del álbum a una experiencia digital rápida, memorable y fácil de explorar en cualquier dispositivo.</p>\n<p>🚀 <em>Desarrollado por Alfredo Ramos.</em></p>"
+			},
+			"walletbill": {
+				"description": "WalletBill es una plataforma moderna para gestionar y visualizar finanzas personales, centrada en rendimiento, claridad y experiencia de usuario.",
+				"contentHtml": "<p><strong>WalletBill</strong> es una plataforma web moderna diseñada para simplificar la gestión, visualización y control de las finanzas personales. Permite entender la situación financiera de un vistazo mediante una interfaz clara, rápida y accesible.</p>\n<p>El producto prioriza la navegación intuitiva, el rendimiento y una jerarquía visual sólida, manteniendo el foco en los datos financieros más relevantes sin distracciones innecesarias.</p>\n<h2>🧩 Funcionalidades</h2>\n<ul>\n<li>Gestión de ingresos y gastos</li>\n<li>Visualización clara del balance financiero</li>\n<li>Transacciones organizadas por categorías</li>\n<li>Interfaz dinámica y reactiva</li>\n<li>Diseño responsive para todos los dispositivos</li>\n<li>Componentes reutilizables para una UI consistente</li>\n<li>Base escalable para futuras funcionalidades</li>\n</ul>\n<h2>💡 Tecnologías utilizadas</h2>\n<h3>React</h3><p>Utilizado para construir una interfaz dinámica y basada en componentes, con interacciones fluidas y una gestión eficiente del estado.</p>\n<h3>Tailwind CSS</h3><p>Aporta un sistema de estilos utility-first que facilita la consistencia visual, el desarrollo rápido y el mantenimiento.</p>\n<h3>JavaScript</h3><p>Gestiona la lógica de aplicación, el estado y el comportamiento interactivo.</p>\n<h3>Vercel</h3><p>Utilizado para el despliegue y alojamiento, con entrega continua y rendimiento fiable.</p>\n<h2>🌐 Demo</h2>\n<p>👉 <a href=\"https://www.walletbill.es/\">Ver demo en vivo</a></p>\n<h2>🎯 Objetivo</h2>\n<p>El objetivo de <strong>WalletBill</strong> es ofrecer una base sólida para un producto moderno de finanzas personales combinando una arquitectura frontend escalable con una experiencia de usuario cuidada.</p>\n<p>🚀 <em>Desarrollado por Alfredo Ramos.</em></p>"
+			}
+		},
+		"project": {
+			"back": "Volver a proyectos",
+			"onPage": "En esta página"
+		},
+		"contact": {
+			"eyebrow": "Construyamos algo útil",
+			"heading": "¿Buscas un ingeniero de software que cuide tanto el código como el producto?",
+			"intro": "Estoy abierto a oportunidades de ingeniería, especialmente en equipos internacionales donde pueda seguir creciendo en backend, full-stack, cloud y seguridad.",
+			"email": "Escríbeme",
+			"linkedin": "LinkedIn"
+		},
+		"footer": {
+			"built": "Desarrollado con Astro."
+		},
+		"cv": {
+			"en": "CV en inglés",
+			"es": "CV en español",
+			"fr": "CV en francés",
+			"de": "CV en alemán",
+			"da": "CV en danés",
+			"zh": "CV en chino"
+		}
+	},
+	"fr": {
+		"meta": {
+			"homeTitle": "Alfredo Ramos",
+			"homeDescription": "Ingénieur logiciel spécialisé dans les produits fiables, les systèmes et la sécurité. Expérience dans l'aérospatial, la défense, la logistique et la cybersécurité.",
+			"homeOgAlt": "Portfolio d'Alfredo Ramos, ingénieur logiciel"
+		},
+		"language": {
+			"selectorAria": "Changer de langue",
+			"menuAria": "Options de langue"
+		},
+		"theme": {
+			"toggle": "Changer le thème de couleur"
+		},
+		"header": {
+			"homeAria": "Alfredo Ramos — Accueil",
+			"openMenu": "Ouvrir le menu"
+		},
+		"nav": {
+			"label": "Navigation principale",
+			"home": "Accueil",
+			"experience": "Expérience",
+			"projects": "Projets",
+			"contact": "Contact"
+		},
+		"hero": {
+			"aria": "Profil professionnel et introduction",
+			"availability": "Ouvert aux opportunités internationales",
+			"location": "Ingénieur logiciel · Espagne",
+			"headlineHtml": "Je développe des logiciels fiables avec un accent sur <span class=\"text-blue-600 dark:text-blue-400\">le produit, les systèmes et la sécurité.</span>",
+			"intro": "Je suis Alfredo Ramos, ingénieur logiciel avec plus de 3 ans d'expérience dans l'aérospatial, la défense et la logistique. J'aime transformer des exigences complexes en produits clairs et maintenables, tout en évoluant vers des postes senior à l'international.",
+			"talk": "Discutons",
+			"downloadCv": "Télécharger le CV",
+			"years": "Années de développement",
+			"featuredProjects": "Projets phares",
+			"workingLanguages": "Langues de travail",
+			"role": "Ingénieur logiciel",
+			"linkedinAria": "Profil LinkedIn",
+			"coreStack": "Stack principal",
+			"coreStackSubtitle": "Technologies que j'utilise",
+			"currentFocus": "Priorités actuelles",
+			"currentFocusText": "Conception de systèmes, développement cloud-native, cybersécurité et renforcement des fondamentaux d'ingénierie.",
+			"beyondCode": "Au-delà du code"
+		},
+		"hobbies": {
+			"writing": "Écriture",
+			"sports": "Sport",
+			"coffee": "Café",
+			"music": "Musique",
+			"movies": "Cinéma"
+		},
+		"experience": {
+			"eyebrow": "Expérience",
+			"heading": "L'ingénierie dans des environnements réels.",
+			"intro": "Du logiciel industriel à l'aérospatial, la défense, la logistique et la cybersécurité, mon parcours s'est construit autour de systèmes complexes et d'équipes multidisciplinaires.",
+			"aria": "Expérience professionnelle",
+			"current": "Actuel",
+			"item1": {
+				"date": "Déc. 2023 — Aujourd'hui",
+				"title": "Ingénieur logiciel",
+				"description": "Consultant en ingénierie logicielle dans l'aérospatial et la défense pour Navantia, tout en contribuant comme ingénieur full-stack à un produit logistique de suivi des commandes."
+			},
+			"item2": {
+				"date": "Sept. 2025 — Nov. 2025",
+				"title": "Stagiaire en cybersécurité",
+				"description": "Travail sur l'analyse réseau et le développement logiciel sécurisé pour Telefónica, en complétant mon profil d'ingénieur par une expérience pratique en sécurité."
+			},
+			"item3": {
+				"date": "Juin 2023 — Déc. 2023",
+				"title": "Stagiaire en développement",
+				"description": "Contribution à des projets logiciels tels que C4IP et Digital Twin, à la documentation technique et à la livraison agile au sein d'équipes multidisciplinaires."
+			},
+			"item4": {
+				"date": "Mars 2023 — Juin 2023",
+				"title": "Stagiaire en développement",
+				"description": "Développement, test et débogage de logiciels dans un environnement industriel orienté production."
+			}
+		},
+		"projects": {
+			"eyebrow": "Projets sélectionnés",
+			"heading": "Des projets conçus pour résoudre, apprendre et livrer.",
+			"intro": "Une sélection de produits où je combine ingénierie, choix d'interface et déploiement réel. Ouvrez un projet pour découvrir la stack et les détails d'implémentation.",
+			"caseStudy": "Étude de cas",
+			"alfredoramospro": {
+				"description": "alfredoramos.pro est un portfolio moderne et minimaliste conçu pour présenter mon travail d'ingénieur logiciel et de créateur numérique.",
+				"contentHtml": "<p><strong>alfredoramos.pro</strong> est un portfolio moderne et minimaliste conçu pour présenter mon travail d'ingénieur logiciel et de créateur numérique. Il associe un système visuel clair en modes clair/sombre à des accents bleus discrets afin de laisser le travail au centre de l'expérience.</p>\n<p>Développé avec <strong>Astro</strong> et stylisé avec <strong>Tailwind CSS</strong>, le portfolio met l'accent sur la rapidité, la modularité, l'accessibilité et une architecture orientée composants.</p>\n<h2>🧩 Fonctionnalités</h2>\n<ul>\n<li>Interface responsive et minimaliste</li>\n<li>Thèmes clair et sombre avec des accents bleus subtils</li>\n<li>Composants UI réutilisables et accessibles</li>\n<li>Typographie et hiérarchie visuelle claires</li>\n<li>Diffusion statique rapide avec Astro</li>\n<li>Styles avec Tailwind CSS</li>\n</ul>\n<h2>💡 Technologies utilisées</h2>\n<ul><li>Astro</li><li>Tailwind CSS</li><li>HTML5</li><li>JavaScript</li><li>Vercel</li></ul>\n<h2>🌐 Démo</h2>\n<p>👉 <a href=\"https://alfredoramos.pro/\">Voir la démo en ligne</a></p>\n<h2>🎯 Objectif</h2>\n<p>L'objectif de <strong>alfredoramos.pro</strong> est de réunir ingénierie, design et marque personnelle dans une interface rapide et ciblée qui présente mon expérience et mes projets sans surcharge visuelle.</p>\n<p>🚀 <em>Développé par Alfredo Ramos.</em></p>"
+			},
+			"sanJuan": {
+				"description": "sanJuan est le site officiel de lancement de mon dernier album, réunissant concept, visuels, tracklist et liens de streaming dans une expérience immersive.",
+				"contentHtml": "<p><strong>sanJuan</strong> est le site officiel de lancement de <em>San Juan</em>, mon dernier album. L'expérience présente le concept de l'album, la tracklist, l'identité visuelle et les liens de streaming à travers une interface immersive et ciblée.</p>\n<p>Développé avec <strong>Next.js</strong> et <strong>TypeScript</strong>, sanJuan s'appuie sur une architecture frontend orientée composants, pensée pour une navigation rapide et une identité visuelle forte.</p>\n<h2>🧩 Fonctionnalités</h2>\n<ul>\n<li>Design responsive au style éditorial</li>\n<li>Concept de l'album et narration visuelle</li>\n<li>Tracklist et liens de streaming</li>\n<li>Typographie moderne et hiérarchie claire</li>\n<li>Développement par composants avec Next.js</li>\n</ul>\n<h2>💡 Technologies utilisées</h2>\n<ul><li>Next.js</li><li>TypeScript</li><li>HTML5</li><li>CSS</li><li>Vercel</li></ul>\n<h2>🌐 Démo</h2>\n<p>👉 <a href=\"https://www.estoessanjuan.es/\">Voir la démo en ligne</a></p>\n<h2>🎯 Objectif</h2>\n<p>Le projet transpose l'identité artistique de l'album dans une expérience numérique rapide, mémorable et simple à explorer sur tous les appareils.</p>\n<p>🚀 <em>Développé par Alfredo Ramos.</em></p>"
+			},
+			"walletbill": {
+				"description": "WalletBill est une plateforme moderne de gestion et de visualisation des finances personnelles, axée sur la performance, la clarté et l'expérience utilisateur.",
+				"contentHtml": "<p><strong>WalletBill</strong> est une plateforme web moderne conçue pour simplifier la gestion, la visualisation et le contrôle des finances personnelles. Elle permet de comprendre sa situation financière en un coup d'œil grâce à une interface claire, rapide et accessible.</p>\n<p>Le produit privilégie une navigation intuitive, de bonnes performances et une hiérarchie visuelle forte, afin de garder l'attention sur les données financières les plus pertinentes.</p>\n<h2>🧩 Fonctionnalités</h2>\n<ul>\n<li>Gestion des revenus et des dépenses</li>\n<li>Visualisation claire du solde financier</li>\n<li>Transactions organisées par catégorie</li>\n<li>Interface dynamique et réactive</li>\n<li>Design responsive pour tous les appareils</li>\n<li>Composants réutilisables pour une UI cohérente</li>\n<li>Base évolutive pour de futures fonctionnalités</li>\n</ul>\n<h2>💡 Technologies utilisées</h2>\n<h3>React</h3><p>Utilisé pour construire une interface dynamique orientée composants, avec des interactions fluides et une gestion efficace de l'état.</p>\n<h3>Tailwind CSS</h3><p>Fournit un système de styles utility-first qui favorise la cohérence visuelle, la rapidité de développement et la maintenabilité.</p>\n<h3>JavaScript</h3><p>Gère la logique applicative, l'état et les comportements interactifs.</p>\n<h3>Vercel</h3><p>Utilisé pour le déploiement et l'hébergement, avec livraison continue et performances fiables.</p>\n<h2>🌐 Démo</h2>\n<p>👉 <a href=\"https://www.walletbill.es/\">Voir la démo en ligne</a></p>\n<h2>🎯 Objectif</h2>\n<p>L'objectif de <strong>WalletBill</strong> est de fournir une base solide pour un produit moderne de finances personnelles en combinant une architecture frontend évolutive avec une expérience utilisateur soigneusement conçue.</p>\n<p>🚀 <em>Développé par Alfredo Ramos.</em></p>"
+			}
+		},
+		"project": {
+			"back": "Retour aux projets",
+			"onPage": "Sur cette page"
+		},
+		"contact": {
+			"eyebrow": "Construisons quelque chose d'utile",
+			"heading": "Vous cherchez un ingénieur logiciel attentif au code comme au produit ?",
+			"intro": "Je suis ouvert aux opportunités d'ingénierie, notamment dans des équipes internationales où je peux continuer à progresser en backend, full-stack, cloud et sécurité.",
+			"email": "M'écrire",
+			"linkedin": "LinkedIn"
+		},
+		"footer": {
+			"built": "Développé avec Astro."
+		},
+		"cv": {
+			"en": "CV en anglais",
+			"es": "CV en espagnol",
+			"fr": "CV en français",
+			"de": "CV en allemand",
+			"da": "CV en danois",
+			"zh": "CV en chinois"
+		}
+	},
+	"de": {
+		"meta": {
+			"homeTitle": "Alfredo Ramos",
+			"homeDescription": "Softwareentwickler mit Fokus auf zuverlässige Produkte, Systeme und Sicherheit. Erfahrung in Luft- und Raumfahrt, Verteidigung, Logistik und Cybersicherheit.",
+			"homeOgAlt": "Softwareentwickler-Portfolio von Alfredo Ramos"
+		},
+		"language": {
+			"selectorAria": "Sprache ändern",
+			"menuAria": "Sprachauswahl"
+		},
+		"theme": {
+			"toggle": "Farbschema wechseln"
+		},
+		"header": {
+			"homeAria": "Alfredo Ramos — Startseite",
+			"openMenu": "Menü öffnen"
+		},
+		"nav": {
+			"label": "Hauptnavigation",
+			"home": "Start",
+			"experience": "Erfahrung",
+			"projects": "Projekte",
+			"contact": "Kontakt"
+		},
+		"hero": {
+			"aria": "Berufsprofil und Einführung",
+			"availability": "Offen für internationale Möglichkeiten",
+			"location": "Softwareentwickler · Spanien",
+			"headlineHtml": "Ich entwickle zuverlässige Software mit Fokus auf <span class=\"text-blue-600 dark:text-blue-400\">Produkt, Systeme und Sicherheit.</span>",
+			"intro": "Ich bin Alfredo Ramos, Softwareentwickler mit mehr als 3 Jahren Erfahrung in Luft- und Raumfahrt, Verteidigung und Logistik. Ich übersetze komplexe Anforderungen gern in klare, wartbare Produkte und entwickle mich gezielt in Richtung internationaler Senior-Rollen weiter.",
+			"talk": "Kontakt aufnehmen",
+			"downloadCv": "Lebenslauf herunterladen",
+			"years": "Jahre Entwicklung",
+			"featuredProjects": "Ausgewählte Projekte",
+			"workingLanguages": "Arbeitssprachen",
+			"role": "Softwareentwickler",
+			"linkedinAria": "LinkedIn-Profil",
+			"coreStack": "Kern-Stack",
+			"coreStackSubtitle": "Technologien, mit denen ich arbeite",
+			"currentFocus": "Aktueller Fokus",
+			"currentFocusText": "Systemdesign, Cloud-native-Entwicklung, Cybersicherheit und stärkere Engineering-Grundlagen.",
+			"beyondCode": "Außerhalb des Codes"
+		},
+		"hobbies": {
+			"writing": "Schreiben",
+			"sports": "Sport",
+			"coffee": "Kaffee",
+			"music": "Musik",
+			"movies": "Filme"
+		},
+		"experience": {
+			"eyebrow": "Erfahrung",
+			"heading": "Engineering in realen Umgebungen.",
+			"intro": "Von industrieller Software bis zu Luft- und Raumfahrt, Verteidigung, Logistik und Cybersicherheit ist meine Erfahrung durch komplexe Systeme und multidisziplinäre Teams geprägt.",
+			"aria": "Berufserfahrung",
+			"current": "Aktuell",
+			"item1": {
+				"date": "Dez. 2023 — Heute",
+				"title": "Softwareentwickler",
+				"description": "Software-Engineering-Berater im Luft- und Raumfahrt- sowie Verteidigungssektor für Navantia und zugleich Full-Stack-Entwickler für ein logistisches Produkt zur Auftragsverfolgung."
+			},
+			"item2": {
+				"date": "Sep. 2025 — Nov. 2025",
+				"title": "Praktikant Cybersicherheit",
+				"description": "Arbeit an Netzwerkanalyse und sicherer Softwareentwicklung für Telefónica, wodurch ich meinen Engineering-Hintergrund um praktische Sicherheitserfahrung erweitert habe."
+			},
+			"item3": {
+				"date": "Juni 2023 — Dez. 2023",
+				"title": "Praktikant Softwareentwicklung",
+				"description": "Mitarbeit an Softwareprojekten wie C4IP und Digital Twin, technischer Dokumentation und agiler Auslieferung in multidisziplinären Teams."
+			},
+			"item4": {
+				"date": "März 2023 — Juni 2023",
+				"title": "Praktikant Softwareentwicklung",
+				"description": "Entwicklung, Test und Debugging von Software in einer produktionsnahen industriellen Umgebung."
+			}
+		},
+		"projects": {
+			"eyebrow": "Ausgewählte Arbeiten",
+			"heading": "Projekte zum Lösen, Lernen und Ausliefern.",
+			"intro": "Eine Auswahl an Produkten, in denen ich Engineering, UI-Entscheidungen und echtes Deployment verbinde. Öffnen Sie ein Projekt, um Stack und Implementierungsdetails zu sehen.",
+			"caseStudy": "Fallstudie",
+			"alfredoramospro": {
+				"description": "alfredoramos.pro ist ein modernes, minimalistisches Portfolio zur Präsentation meiner Arbeit als Softwareentwickler und digitaler Kreativer.",
+				"contentHtml": "<p><strong>alfredoramos.pro</strong> ist ein modernes, minimalistisches Portfolio, das meine Arbeit als Softwareentwickler und digitaler Kreativer präsentiert. Ein klares Hell-/Dunkel-Design mit zurückhaltenden blauen Akzenten sorgt dafür, dass die Projekte im Mittelpunkt stehen.</p>\n<p>Das Portfolio wurde mit <strong>Astro</strong> entwickelt und mit <strong>Tailwind CSS</strong> gestaltet. Im Fokus stehen Geschwindigkeit, Modularität, Barrierefreiheit und eine komponentenbasierte Architektur.</p>\n<h2>🧩 Funktionen</h2>\n<ul>\n<li>Responsives und minimalistisches Interface</li>\n<li>Heller und dunkler Modus mit dezenten blauen Akzenten</li>\n<li>Wiederverwendbare und barrierearme UI-Komponenten</li>\n<li>Klare Typografie und visuelle Hierarchie</li>\n<li>Schnelle statische Auslieferung mit Astro</li>\n<li>Styling mit Tailwind CSS</li>\n</ul>\n<h2>💡 Eingesetzte Technologien</h2>\n<ul><li>Astro</li><li>Tailwind CSS</li><li>HTML5</li><li>JavaScript</li><li>Vercel</li></ul>\n<h2>🌐 Demo</h2>\n<p>👉 <a href=\"https://alfredoramos.pro/\">Live-Demo ansehen</a></p>\n<h2>🎯 Ziel</h2>\n<p><strong>alfredoramos.pro</strong> verbindet Engineering, Design und Personal Branding in einer schnellen, fokussierten Oberfläche, die meine Erfahrung und Projekte ohne unnötige visuelle Ablenkung präsentiert.</p>\n<p>🚀 <em>Entwickelt von Alfredo Ramos.</em></p>"
+			},
+			"sanJuan": {
+				"description": "sanJuan ist die offizielle Launch-Website meines neuesten Albums und verbindet Konzept, Visuals, Tracklist und Streaming-Links in einer immersiven Erfahrung.",
+				"contentHtml": "<p><strong>sanJuan</strong> ist die offizielle Website zum Launch von <em>San Juan</em>, meinem neuesten Musikalbum. Die Seite präsentiert Konzept, Tracklist, visuelle Identität und Streaming-Links in einer immersiven, fokussierten Oberfläche.</p>\n<p>sanJuan wurde mit <strong>Next.js</strong> und <strong>TypeScript</strong> entwickelt und nutzt eine komponentenbasierte Frontend-Architektur für schnelle Navigation und eine starke visuelle Identität.</p>\n<h2>🧩 Funktionen</h2>\n<ul>\n<li>Responsives Design mit Editorial-Charakter</li>\n<li>Albumkonzept und visuelles Storytelling</li>\n<li>Tracklist und Streaming-Links</li>\n<li>Moderne Typografie und klare Hierarchie</li>\n<li>Komponentenbasierte Entwicklung mit Next.js</li>\n</ul>\n<h2>💡 Eingesetzte Technologien</h2>\n<ul><li>Next.js</li><li>TypeScript</li><li>HTML5</li><li>CSS</li><li>Vercel</li></ul>\n<h2>🌐 Demo</h2>\n<p>👉 <a href=\"https://www.estoessanjuan.es/\">Live-Demo ansehen</a></p>\n<h2>🎯 Ziel</h2>\n<p>Das Projekt überträgt die künstlerische Identität des Albums in ein schnelles, einprägsames digitales Erlebnis, das sich auf jedem Gerät leicht erkunden lässt.</p>\n<p>🚀 <em>Entwickelt von Alfredo Ramos.</em></p>"
+			},
+			"walletbill": {
+				"description": "WalletBill ist eine moderne Plattform zur Verwaltung und Visualisierung persönlicher Finanzen mit Fokus auf Performance, Klarheit und User Experience.",
+				"contentHtml": "<p><strong>WalletBill</strong> ist eine moderne Webplattform zur einfachen Verwaltung, Visualisierung und Kontrolle persönlicher Finanzen. Nutzer können ihre finanzielle Situation dank einer klaren, schnellen und zugänglichen Oberfläche auf einen Blick erfassen.</p>\n<p>Das Produkt setzt auf intuitive Navigation, hohe Performance und eine klare visuelle Hierarchie, damit die wichtigsten Finanzdaten ohne unnötige Ablenkung im Mittelpunkt stehen.</p>\n<h2>🧩 Funktionen</h2>\n<ul>\n<li>Verwaltung von Einnahmen und Ausgaben</li>\n<li>Klare Darstellung des finanziellen Saldos</li>\n<li>Kategorisierte Transaktionen</li>\n<li>Dynamische und reaktive Benutzeroberfläche</li>\n<li>Responsives Design für alle Geräte</li>\n<li>Wiederverwendbare Komponenten für eine konsistente UI</li>\n<li>Skalierbare Grundlage für zukünftige Funktionen</li>\n</ul>\n<h2>💡 Eingesetzte Technologien</h2>\n<h3>React</h3><p>Für eine dynamische, komponentenbasierte Oberfläche mit flüssigen Interaktionen und effizientem State-Management.</p>\n<h3>Tailwind CSS</h3><p>Ein Utility-First-Stylingsystem, das visuelle Konsistenz, schnelle Entwicklung und gute Wartbarkeit unterstützt.</p>\n<h3>JavaScript</h3><p>Steuert Anwendungslogik, Zustand und interaktives Verhalten.</p>\n<h3>Vercel</h3><p>Für Deployment und Hosting mit kontinuierlicher Auslieferung und zuverlässiger Performance.</p>\n<h2>🌐 Demo</h2>\n<p>👉 <a href=\"https://www.walletbill.es/\">Live-Demo ansehen</a></p>\n<h2>🎯 Ziel</h2>\n<p><strong>WalletBill</strong> schafft eine solide Grundlage für ein modernes Personal-Finance-Produkt, indem eine skalierbare Frontend-Architektur mit einer sorgfältig gestalteten User Experience kombiniert wird.</p>\n<p>🚀 <em>Entwickelt von Alfredo Ramos.</em></p>"
+			}
+		},
+		"project": {
+			"back": "Zurück zu den Projekten",
+			"onPage": "Auf dieser Seite"
+		},
+		"contact": {
+			"eyebrow": "Lassen Sie uns etwas Nützliches bauen",
+			"heading": "Sie suchen einen Softwareentwickler, dem Code und Produkt gleichermaßen wichtig sind?",
+			"intro": "Ich bin offen für Engineering-Rollen, besonders in internationalen Teams, in denen ich mich in Backend, Full-Stack, Cloud und Sicherheit weiterentwickeln kann.",
+			"email": "E-Mail senden",
+			"linkedin": "LinkedIn"
+		},
+		"footer": {
+			"built": "Entwickelt mit Astro."
+		},
+		"cv": {
+			"en": "Lebenslauf auf Englisch",
+			"es": "Lebenslauf auf Spanisch",
+			"fr": "Lebenslauf auf Französisch",
+			"de": "Lebenslauf auf Deutsch",
+			"da": "Lebenslauf auf Dänisch",
+			"zh": "Lebenslauf auf Chinesisch"
+		}
+	},
+	"da": {
+		"meta": {
+			"homeTitle": "Alfredo Ramos",
+			"homeDescription": "Softwareingeniør med fokus på pålidelige produkter, systemer og sikkerhed. Erfaring fra luftfart, forsvar, logistik og cybersikkerhed.",
+			"homeOgAlt": "Alfredo Ramos' portfolio som softwareingeniør"
+		},
+		"language": {
+			"selectorAria": "Skift sprog",
+			"menuAria": "Sprogvalg"
+		},
+		"theme": {
+			"toggle": "Skift farvetema"
+		},
+		"header": {
+			"homeAria": "Alfredo Ramos — Forside",
+			"openMenu": "Åbn menu"
+		},
+		"nav": {
+			"label": "Hovednavigation",
+			"home": "Forside",
+			"experience": "Erfaring",
+			"projects": "Projekter",
+			"contact": "Kontakt"
+		},
+		"hero": {
+			"aria": "Professionel profil og introduktion",
+			"availability": "Åben for internationale muligheder",
+			"location": "Softwareingeniør · Spanien",
+			"headlineHtml": "Jeg bygger pålidelig software med fokus på <span class=\"text-blue-600 dark:text-blue-400\">produkt, systemer og sikkerhed.</span>",
+			"intro": "Jeg er Alfredo Ramos, softwareingeniør med mere end 3 års erfaring fra luftfart, forsvar og logistik. Jeg kan lide at omsætte komplekse krav til klare, vedligeholdelsesvenlige produkter og arbejder målrettet mod seniorroller i internationale teams.",
+			"talk": "Lad os tale",
+			"downloadCv": "Download CV",
+			"years": "År med udvikling",
+			"featuredProjects": "Udvalgte projekter",
+			"workingLanguages": "Arbejdssprog",
+			"role": "Softwareingeniør",
+			"linkedinAria": "LinkedIn-profil",
+			"coreStack": "Primær stack",
+			"coreStackSubtitle": "Teknologier jeg arbejder med",
+			"currentFocus": "Aktuelt fokus",
+			"currentFocusText": "Systemdesign, cloud-native udvikling, cybersikkerhed og stærkere engineering-fundament.",
+			"beyondCode": "Ud over kode"
+		},
+		"hobbies": {
+			"writing": "Skrivning",
+			"sports": "Sport",
+			"coffee": "Kaffe",
+			"music": "Musik",
+			"movies": "Film"
+		},
+		"experience": {
+			"eyebrow": "Erfaring",
+			"heading": "Engineering i virkelige miljøer.",
+			"intro": "Fra industriel software til luftfart, forsvar, logistik og cybersikkerhed er min erfaring formet af komplekse systemer og tværfaglige teams.",
+			"aria": "Erhvervserfaring",
+			"current": "Nuværende",
+			"item1": {
+				"date": "Dec. 2023 — Nu",
+				"title": "Softwareingeniør",
+				"description": "Software engineering-konsulent i luftfarts- og forsvarssektoren for Navantia, samtidig med at jeg bidrager som full-stack-ingeniør til et logistikprodukt til ordresporing."
+			},
+			"item2": {
+				"date": "Sep. 2025 — Nov. 2025",
+				"title": "Praktikant i cybersikkerhed",
+				"description": "Arbejdede med netværksanalyse og sikker softwareudvikling for Telefónica og udvidede min engineering-baggrund med praktisk sikkerhedserfaring."
+			},
+			"item3": {
+				"date": "Jun. 2023 — Dec. 2023",
+				"title": "Praktikant i softwareudvikling",
+				"description": "Bidrog til softwareprojekter som C4IP og Digital Twin, teknisk dokumentation og agil levering i tværfaglige teams."
+			},
+			"item4": {
+				"date": "Mar. 2023 — Jun. 2023",
+				"title": "Praktikant i softwareudvikling",
+				"description": "Udviklede, testede og fejlrettede software i et produktionsorienteret industrielt miljø."
+			}
+		},
+		"projects": {
+			"eyebrow": "Udvalgt arbejde",
+			"heading": "Projekter bygget til at løse, lære og levere.",
+			"intro": "Et udvalg af produkter, hvor jeg kombinerer engineering, UI-beslutninger og reel deployment. Åbn et projekt for at se stack og implementeringsdetaljer.",
+			"caseStudy": "Case",
+			"alfredoramospro": {
+				"description": "alfredoramos.pro er en moderne, minimalistisk portfolio, der præsenterer mit arbejde som softwareingeniør og digital skaber.",
+				"contentHtml": "<p><strong>alfredoramos.pro</strong> er en moderne og minimalistisk portfolio, der præsenterer mit arbejde som softwareingeniør og digital skaber. Et rent visuelt system med lys/mørk tilstand og afdæmpede blå accenter holder fokus på arbejdet.</p>\n<p>Portfolioen er bygget med <strong>Astro</strong> og stylet med <strong>Tailwind CSS</strong> med fokus på hastighed, modularitet, tilgængelighed og en komponentbaseret arkitektur.</p>\n<h2>🧩 Funktioner</h2>\n<ul>\n<li>Responsivt og minimalistisk interface</li>\n<li>Lys og mørk tilstand med diskrete blå accenter</li>\n<li>Genanvendelige og tilgængelige UI-komponenter</li>\n<li>Tydelig typografi og visuelt hierarki</li>\n<li>Hurtig statisk levering med Astro</li>\n<li>Styling med Tailwind CSS</li>\n</ul>\n<h2>💡 Anvendte teknologier</h2>\n<ul><li>Astro</li><li>Tailwind CSS</li><li>HTML5</li><li>JavaScript</li><li>Vercel</li></ul>\n<h2>🌐 Demo</h2>\n<p>👉 <a href=\"https://alfredoramos.pro/\">Se live-demo</a></p>\n<h2>🎯 Formål</h2>\n<p>Målet med <strong>alfredoramos.pro</strong> er at kombinere engineering, design og personlig branding i et hurtigt og fokuseret interface, der viser min erfaring og mine projekter uden unødig visuel støj.</p>\n<p>🚀 <em>Udviklet af Alfredo Ramos.</em></p>"
+			},
+			"sanJuan": {
+				"description": "sanJuan er den officielle lancering hjemmeside for mit seneste album og samler koncept, visuals, trackliste og streaminglinks i en immersiv oplevelse.",
+				"contentHtml": "<p><strong>sanJuan</strong> er den officielle lancering hjemmeside for <em>San Juan</em>, mit seneste musikalbum. Oplevelsen præsenterer albummets koncept, trackliste, visuelle identitet og streaminglinks i et immersivt og fokuseret interface.</p>\n<p>sanJuan er bygget med <strong>Next.js</strong> og <strong>TypeScript</strong> og anvender en komponentbaseret frontend-arkitektur, der er designet til hurtig navigation og en stærk visuel identitet.</p>\n<h2>🧩 Funktioner</h2>\n<ul>\n<li>Responsivt design med redaktionelt udtryk</li>\n<li>Albumkoncept og visuel storytelling</li>\n<li>Trackliste og streaminglinks</li>\n<li>Moderne typografi og tydeligt hierarki</li>\n<li>Komponentbaseret udvikling med Next.js</li>\n</ul>\n<h2>💡 Anvendte teknologier</h2>\n<ul><li>Next.js</li><li>TypeScript</li><li>HTML5</li><li>CSS</li><li>Vercel</li></ul>\n<h2>🌐 Demo</h2>\n<p>👉 <a href=\"https://www.estoessanjuan.es/\">Se live-demo</a></p>\n<h2>🎯 Formål</h2>\n<p>Projektet omsætter albummets kunstneriske identitet til en hurtig, mindeværdig digital oplevelse, som er nem at udforske på tværs af enheder.</p>\n<p>🚀 <em>Udviklet af Alfredo Ramos.</em></p>"
+			},
+			"walletbill": {
+				"description": "WalletBill er en moderne platform til styring og visualisering af privatøkonomi med fokus på ydeevne, klarhed og brugeroplevelse.",
+				"contentHtml": "<p><strong>WalletBill</strong> er en moderne webplatform, der gør det lettere at administrere, visualisere og kontrollere privatøkonomi. Brugeren kan forstå sin økonomiske situation med et hurtigt overblik gennem et klart, hurtigt og tilgængeligt interface.</p>\n<p>Produktet prioriterer intuitiv navigation, høj ydeevne og et tydeligt visuelt hierarki, så fokus forbliver på de vigtigste økonomiske data.</p>\n<h2>🧩 Funktioner</h2>\n<ul>\n<li>Håndtering af indtægter og udgifter</li>\n<li>Tydelig visualisering af økonomisk saldo</li>\n<li>Transaktioner organiseret efter kategori</li>\n<li>Dynamisk og reaktiv brugergrænseflade</li>\n<li>Responsivt design til alle enheder</li>\n<li>Genanvendelige komponenter til en konsistent UI</li>\n<li>Skalerbart fundament til fremtidige funktioner</li>\n</ul>\n<h2>💡 Anvendte teknologier</h2>\n<h3>React</h3><p>Bruges til at bygge en dynamisk, komponentbaseret brugergrænseflade med smidige interaktioner og effektiv state management.</p>\n<h3>Tailwind CSS</h3><p>Giver et utility-first stylingsystem, der understøtter visuel konsistens, hurtig udvikling og god vedligeholdelse.</p>\n<h3>JavaScript</h3><p>Håndterer applikationslogik, state og interaktiv adfærd.</p>\n<h3>Vercel</h3><p>Bruges til deployment og hosting med kontinuerlig levering og stabil ydeevne.</p>\n<h2>🌐 Demo</h2>\n<p>👉 <a href=\"https://www.walletbill.es/\">Se live-demo</a></p>\n<h2>🎯 Formål</h2>\n<p>Målet med <strong>WalletBill</strong> er at skabe et solidt fundament for et moderne privatøkonomisk produkt ved at kombinere en skalerbar frontend-arkitektur med en gennemtænkt brugeroplevelse.</p>\n<p>🚀 <em>Udviklet af Alfredo Ramos.</em></p>"
+			}
+		},
+		"project": {
+			"back": "Tilbage til projekter",
+			"onPage": "På denne side"
+		},
+		"contact": {
+			"eyebrow": "Lad os bygge noget nyttigt",
+			"heading": "Leder du efter en softwareingeniør, der går op i både kode og produkt?",
+			"intro": "Jeg er åben for engineering-muligheder, især i internationale teams, hvor jeg kan fortsætte med at udvikle mig inden for backend, full-stack, cloud og sikkerhed.",
+			"email": "Send e-mail",
+			"linkedin": "LinkedIn"
+		},
+		"footer": {
+			"built": "Bygget med Astro."
+		},
+		"cv": {
+			"en": "CV på engelsk",
+			"es": "CV på spansk",
+			"fr": "CV på fransk",
+			"de": "CV på tysk",
+			"da": "CV på dansk",
+			"zh": "CV på kinesisk"
+		}
+	},
+	"zh": {
+		"meta": {
+			"homeTitle": "Alfredo Ramos",
+			"homeDescription": "专注于可靠产品、系统与安全的软件工程师，拥有航空航天、国防、物流和网络安全领域的经验。",
+			"homeOgAlt": "Alfredo Ramos 软件工程师作品集"
+		},
+		"language": {
+			"selectorAria": "切换语言",
+			"menuAria": "语言选项"
+		},
+		"theme": {
+			"toggle": "切换颜色主题"
+		},
+		"header": {
+			"homeAria": "Alfredo Ramos — 首页",
+			"openMenu": "打开菜单"
+		},
+		"nav": {
+			"label": "主导航",
+			"home": "首页",
+			"experience": "经历",
+			"projects": "项目",
+			"contact": "联系"
+		},
+		"hero": {
+			"aria": "职业简介与介绍",
+			"availability": "接受国际工作机会",
+			"location": "软件工程师 · 西班牙",
+			"headlineHtml": "我构建可靠的软件，并专注于<span class=\"text-blue-600 dark:text-blue-400\">产品、系统与安全。</span>",
+			"intro": "我是 Alfredo Ramos，一名拥有 3 年以上经验的软件工程师，曾参与航空航天、国防和物流相关工作。我喜欢把复杂需求转化为清晰、可维护的产品，并持续向国际化高级工程师岗位成长。",
+			"talk": "联系我",
+			"downloadCv": "下载简历",
+			"years": "开发经验年数",
+			"featuredProjects": "精选项目",
+			"workingLanguages": "工作语言",
+			"role": "软件工程师",
+			"linkedinAria": "LinkedIn 个人资料",
+			"coreStack": "核心技术栈",
+			"coreStackSubtitle": "我常用的技术",
+			"currentFocus": "当前重点",
+			"currentFocusText": "系统设计、云原生开发、网络安全，以及更扎实的软件工程基础。",
+			"beyondCode": "代码之外"
+		},
+		"hobbies": {
+			"writing": "写作",
+			"sports": "运动",
+			"coffee": "咖啡",
+			"music": "音乐",
+			"movies": "电影"
+		},
+		"experience": {
+			"eyebrow": "工作经历",
+			"heading": "在真实工程环境中积累经验。",
+			"intro": "从工业软件到航空航天、国防、物流与网络安全，我的经验始终围绕复杂系统和跨学科团队展开。",
+			"aria": "职业经历",
+			"current": "当前",
+			"item1": {
+				"date": "2023年12月 — 至今",
+				"title": "软件工程师",
+				"description": "作为软件工程顾问参与 Navantia 的航空航天与国防项目，同时以全栈工程师身份参与物流订单跟踪产品的开发。"
+			},
+			"item2": {
+				"date": "2025年9月 — 2025年11月",
+				"title": "网络安全实习生",
+				"description": "为 Telefónica 参与网络分析和安全软件开发工作，在工程背景上进一步积累了实践安全经验。"
+			},
+			"item3": {
+				"date": "2023年6月 — 2023年12月",
+				"title": "软件开发实习生",
+				"description": "参与 C4IP、Digital Twin 等软件项目，以及技术文档和跨学科团队中的敏捷交付工作。"
+			},
+			"item4": {
+				"date": "2023年3月 — 2023年6月",
+				"title": "软件开发实习生",
+				"description": "在面向生产的工业环境中开发、测试并调试软件。"
+			}
+		},
+		"projects": {
+			"eyebrow": "精选作品",
+			"heading": "为解决问题、学习与交付而构建的项目。",
+			"intro": "这些项目结合了工程实现、UI 决策和真实部署。打开项目可查看技术栈与实现细节。",
+			"caseStudy": "案例",
+			"alfredoramospro": {
+				"description": "alfredoramos.pro 是一个现代、极简的个人作品集，用于展示我作为软件工程师和数字创作者的工作。",
+				"contentHtml": "<p><strong>alfredoramos.pro</strong> 是一个现代、极简的个人作品集，用于展示我作为软件工程师和数字创作者的工作。网站通过简洁的明暗主题和克制的蓝色强调，让项目内容始终处于体验的核心。</p>\n<p>项目使用 <strong>Astro</strong> 构建，并通过 <strong>Tailwind CSS</strong> 完成样式设计，重点关注速度、模块化、可访问性以及组件驱动的架构。</p>\n<h2>🧩 主要功能</h2>\n<ul>\n<li>响应式极简界面</li>\n<li>带有细腻蓝色强调的明暗主题</li>\n<li>可复用且注重可访问性的 UI 组件</li>\n<li>清晰的字体与视觉层级</li>\n<li>基于 Astro 的快速静态交付</li>\n<li>使用 Tailwind CSS 进行样式开发</li>\n</ul>\n<h2>💡 使用技术</h2>\n<ul><li>Astro</li><li>Tailwind CSS</li><li>HTML5</li><li>JavaScript</li><li>Vercel</li></ul>\n<h2>🌐 在线演示</h2>\n<p>👉 <a href=\"https://alfredoramos.pro/\">查看在线演示</a></p>\n<h2>🎯 项目目标</h2>\n<p><strong>alfredoramos.pro</strong> 的目标是在一个快速、专注的界面中融合工程、设计与个人品牌，以清晰的方式展示我的经验和项目，避免不必要的视觉干扰。</p>\n<p>🚀 <em>由 Alfredo Ramos 开发。</em></p>"
+			},
+			"sanJuan": {
+				"description": "sanJuan 是我最新音乐专辑的官方发布网站，将概念、视觉、曲目列表和流媒体链接整合为沉浸式体验。",
+				"contentHtml": "<p><strong>sanJuan</strong> 是我最新音乐专辑 <em>San Juan</em> 的官方发布网站。网站通过沉浸式且聚焦的界面展示专辑概念、曲目列表、视觉风格和流媒体链接。</p>\n<p>sanJuan 使用 <strong>Next.js</strong> 和 <strong>TypeScript</strong> 开发，采用组件化前端架构，兼顾快速导航与鲜明的视觉识别。</p>\n<h2>🧩 主要功能</h2>\n<ul>\n<li>具有编辑设计风格的响应式界面</li>\n<li>专辑概念与视觉叙事</li>\n<li>曲目列表与流媒体链接</li>\n<li>现代字体和清晰的信息层级</li>\n<li>基于 Next.js 的组件化开发</li>\n</ul>\n<h2>💡 使用技术</h2>\n<ul><li>Next.js</li><li>TypeScript</li><li>HTML5</li><li>CSS</li><li>Vercel</li></ul>\n<h2>🌐 在线演示</h2>\n<p>👉 <a href=\"https://www.estoessanjuan.es/\">查看在线演示</a></p>\n<h2>🎯 项目目标</h2>\n<p>该项目将专辑的艺术身份转化为快速、令人印象深刻且可在不同设备上轻松浏览的数字体验。</p>\n<p>🚀 <em>由 Alfredo Ramos 开发。</em></p>"
+			},
+			"walletbill": {
+				"description": "WalletBill 是一个现代个人财务管理与可视化平台，重点关注性能、清晰度和用户体验。",
+				"contentHtml": "<p><strong>WalletBill</strong> 是一个现代个人财务管理平台，旨在简化收入、支出以及整体财务状况的管理与可视化。用户可以通过清晰、快速且易用的界面快速了解自己的财务状态。</p>\n<p>产品优先考虑直观导航、高性能和清晰的视觉层级，让用户聚焦最重要的财务数据，减少不必要的干扰。</p>\n<h2>🧩 主要功能</h2>\n<ul>\n<li>收入与支出管理</li>\n<li>清晰展示财务余额</li>\n<li>按类别组织交易</li>\n<li>动态响应式用户界面</li>\n<li>适配各种设备的响应式设计</li>\n<li>可复用组件，保持 UI 一致性</li>\n<li>为未来功能提供可扩展基础</li>\n</ul>\n<h2>💡 使用技术</h2>\n<h3>React</h3><p>用于构建动态的组件化界面，实现流畅交互和高效的状态管理。</p>\n<h3>Tailwind CSS</h3><p>提供 utility-first 样式体系，帮助保持视觉一致性，提高开发速度并便于维护。</p>\n<h3>JavaScript</h3><p>负责应用逻辑、状态管理和交互行为。</p>\n<h3>Vercel</h3><p>用于部署和托管，提供持续交付与稳定性能。</p>\n<h2>🌐 在线演示</h2>\n<p>👉 <a href=\"https://www.walletbill.es/\">查看在线演示</a></p>\n<h2>🎯 项目目标</h2>\n<p><strong>WalletBill</strong> 的目标是通过可扩展的前端架构和精心设计的用户体验，为现代个人财务产品建立可靠基础。</p>\n<p>🚀 <em>由 Alfredo Ramos 开发。</em></p>"
+			}
+		},
+		"project": {
+			"back": "返回项目",
+			"onPage": "本页内容"
+		},
+		"contact": {
+			"eyebrow": "一起做点真正有用的东西",
+			"heading": "在寻找一位同时重视代码质量与产品体验的软件工程师吗？",
+			"intro": "我愿意考虑软件工程相关机会，尤其是国际化团队，让我能够继续在后端、全栈、云和安全方向成长。",
+			"email": "发送邮件",
+			"linkedin": "LinkedIn"
+		},
+		"footer": {
+			"built": "使用 Astro 构建。"
+		},
+		"cv": {
+			"en": "英文简历",
+			"es": "西班牙语简历",
+			"fr": "法语简历",
+			"de": "德语简历",
+			"da": "丹麦语简历",
+			"zh": "中文简历"
+		}
+	}
+}

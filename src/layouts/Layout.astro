@@ -6,12 +6,15 @@ import Background from "../components/layout/Background.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 
 const {
-	pageTitle = "Alfredo Ramos' site",
+	pageTitle = "Alfredo Ramos",
 	description = "Software engineer focused on reliable products, systems and security.",
 	ogimage = {
 		url: "/images/projects/alfredoramospro.png",
 		alt: "Alfredo Ramos portfolio",
 	},
+	titleKey,
+	descriptionKey,
+	ogAltKey,
 } = Astro.props;
 
 const siteUrl = new URL(Astro.url).origin;
@@ -22,13 +25,18 @@ const canonical = Astro.site
 
 <html
 	lang="en"
+	data-language="en"
 	class="scroll-smooth bg-[#fafafa] font-montserrat antialiased dark:bg-[#09090b]"
 >
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>{pageTitle}</title>
-		<meta name="description" content={description} />
+		<title data-i18n={titleKey}>{pageTitle}</title>
+		<meta
+			name="description"
+			content={description}
+			data-i18n-content={descriptionKey}
+		/>
 		<meta name="author" content="Alfredo Ramos" />
 		<meta name="robots" content="index, follow" />
 		<meta
@@ -48,10 +56,22 @@ const canonical = Astro.site
 		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 
-		<meta property="og:title" content={pageTitle} />
-		<meta property="og:description" content={description} />
+		<meta
+			property="og:title"
+			content={pageTitle}
+			data-i18n-content={titleKey}
+		/>
+		<meta
+			property="og:description"
+			content={description}
+			data-i18n-content={descriptionKey}
+		/>
 		<meta property="og:image" content={`${siteUrl}${ogimage.url}`} />
-		<meta property="og:image:alt" content={ogimage.alt} />
+		<meta
+			property="og:image:alt"
+			content={ogimage.alt}
+			data-i18n-content={ogAltKey}
+		/>
 		<meta property="og:url" content={Astro.url.toString()} />
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="Alfredo Ramos" />
@@ -59,11 +79,26 @@ const canonical = Astro.site
 
 		<script is:inline>
 			(() => {
-				const stored = localStorage.getItem("theme");
-				const dark = stored
-					? stored === "dark"
+				const storedTheme = localStorage.getItem("theme");
+				const dark = storedTheme
+					? storedTheme === "dark"
 					: window.matchMedia("(prefers-color-scheme: dark)").matches;
 				document.documentElement.classList.toggle("dark", dark);
+
+				const supported = ["en", "es", "fr", "de", "da", "zh"];
+				const storedLanguage = localStorage.getItem("portfolio-language");
+				const language = supported.includes(storedLanguage || "")
+					? storedLanguage
+					: "en";
+				document.documentElement.dataset.language = language;
+				document.documentElement.lang = language === "zh" ? "zh-CN" : language;
+				if (language !== "en") {
+					document.documentElement.classList.add("i18n-pending");
+					window.setTimeout(
+						() => document.documentElement.classList.remove("i18n-pending"),
+						1200,
+					);
+				}
 			})();
 		</script>
 	</head>
@@ -77,5 +112,8 @@ const canonical = Astro.site
 			<main><slot /></main>
 			<Footer />
 		</div>
+		<script>
+			import "../scripts/i18n";
+		</script>
 	</body>
 </html>

@@ -12,13 +12,13 @@ const { email, linkedin } = staticData.data;
     <div class="pointer-events-none absolute inset-x-14 top-0 h-px bg-gradient-to-r from-transparent via-blue-400/70 to-transparent"></div>
     <div class="relative grid items-end gap-10 lg:grid-cols-[1fr_auto]">
       <div class="max-w-3xl">
-        <p class="text-sm font-bold uppercase tracking-[0.18em] text-blue-400">Let's build something useful</p>
-        <h2 class="mt-4 text-4xl font-bold tracking-[-0.045em] sm:text-5xl">Looking for a software engineer who cares about both code and product?</h2>
-        <p class="mt-5 max-w-2xl text-base leading-7 text-zinc-400">I'm open to engineering opportunities, especially international teams where I can keep growing in backend, full-stack, cloud and security.</p>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-blue-400" data-i18n="contact.eyebrow">Let's build something useful</p>
+        <h2 class="mt-4 text-4xl font-bold tracking-[-0.045em] sm:text-5xl" data-i18n="contact.heading">Looking for a software engineer who cares about both code and product?</h2>
+        <p class="mt-5 max-w-2xl text-base leading-7 text-zinc-400" data-i18n="contact.intro">I'm open to engineering opportunities, especially international teams where I can keep growing in backend, full-stack, cloud and security.</p>
       </div>
       <div class="flex flex-wrap gap-3 lg:justify-end">
-        <Button link={`mailto:${email}`} text="Email me" iconName="envelope" />
-        <Button link={linkedin} text="LinkedIn" iconName="linkedin" variant="dark" isExternal={true} class="!border-zinc-700 !bg-zinc-900 !text-white hover:!bg-zinc-800" />
+        <Button link={`mailto:${email}`} text="Email me" i18nKey="contact.email" iconName="envelope" />
+        <Button link={linkedin} text="LinkedIn" i18nKey="contact.linkedin" iconName="linkedin" variant="dark" isExternal={true} class="!border-zinc-700 !bg-zinc-900 !text-white hover:!bg-zinc-800" />
       </div>
     </div>
   </div>

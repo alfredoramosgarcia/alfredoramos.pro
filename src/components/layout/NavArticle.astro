@@ -4,25 +4,24 @@ const { title } = Astro.props;
 
 <aside class="hidden xl:block">
   <div class="glass-surface sticky top-28 rounded-2xl p-5">
-    <p class="text-xs font-bold uppercase tracking-[0.15em] text-zinc-400">On this page</p>
+    <p class="text-xs font-bold uppercase tracking-[0.15em] text-zinc-400" data-i18n="project.onPage">On this page</p>
     <ul id="toc-list" class="mt-4 space-y-1 border-l border-zinc-200 pl-3 dark:border-zinc-800">
-      <li><a class="toc-link block rounded-lg px-2 py-1.5 text-sm font-semibold text-zinc-950 dark:text-white" href="#start">{title}</a></li>
+      <li data-toc-root><a class="toc-link block rounded-lg px-2 py-1.5 text-sm font-semibold text-zinc-950 dark:text-white" href="#start">{title}</a></li>
     </ul>
   </div>
 </aside>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  const setupToc = () => {
     const toc = document.getElementById('toc-list');
     const content = document.getElementById('content');
     if (!toc || !content) return;
 
+    toc.querySelectorAll('li:not([data-toc-root])').forEach((item) => item.remove());
     const headings = Array.from(content.querySelectorAll('h2, h3'));
     headings.forEach((heading, index) => {
-      if (!heading.id) {
-        const base = heading.textContent?.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || `section-${index}`;
-        heading.id = `${base}-${index}`;
-      }
+      const base = heading.textContent?.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\u4e00-\u9fff]+/g, '-').replace(/(^-|-$)/g, '') || `section-${index}`;
+      heading.id = `${base}-${index}`;
       const li = document.createElement('li');
       const link = document.createElement('a');
       link.href = `#${heading.id}`;
@@ -44,7 +43,11 @@ const { title } = Astro.props;
       entries.forEach((entry) => { if (entry.isIntersecting) setActive(entry.target.id); });
     }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
 
-    document.getElementById('start') && observer.observe(document.getElementById('start'));
+    const start = document.getElementById('start');
+    if (start) observer.observe(start);
     headings.forEach((heading) => observer.observe(heading));
-  });
+  };
+
+  document.addEventListener('DOMContentLoaded', setupToc);
+  window.addEventListener('portfolio:language-changed', setupToc);
 </script>

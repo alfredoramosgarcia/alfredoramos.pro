@@ -190,3 +190,9 @@ pre { scrollbar-color: #71717a #27272a; scrollbar-width: auto; }
   .site-background__noise { opacity: 0.012; }
   .dark .site-background__noise { opacity: 0.02; }
 }
+
+/* Internationalization --------------------------------------------------------- */
+html.i18n-pending body { visibility: hidden; }
+html[lang="zh-CN"] body {
+  font-family: Inter, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}

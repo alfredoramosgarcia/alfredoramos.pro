@@ -1,11 +1,16 @@
 ---
-import { getCollection } from "astro:content";
 import Hobbie from "./Hobbie.astro";
-const [staticData] = await getCollection("staticData");
 interface Props { variant?: "default" | "vertical"; }
 const { variant = "default" } = Astro.props as Props;
+const hobbies = [
+  { tag: "Writing", key: "hobbies.writing" },
+  { tag: "Sports", key: "hobbies.sports" },
+  { tag: "Coffee", key: "hobbies.coffee" },
+  { tag: "Music", key: "hobbies.music" },
+  { tag: "Movies", key: "hobbies.movies" },
+];
 ---
 
 <div class:list={["flex gap-2", variant === "vertical" ? "flex-col items-start" : "flex-wrap items-center"]}>
-  {staticData.data.hobbies.map((hobby) => <Hobbie tag={hobby} />)}
+  {hobbies.map((hobby) => <Hobbie tag={hobby.tag} i18nKey={hobby.key} />)}
 </div>

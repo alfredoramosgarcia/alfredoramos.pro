@@ -1,16 +1,15 @@
 ---
 import { Icon } from "astro-icon/components";
 
-type ButtonVariant = "default" | "big" | "dark";
 interface Props {
   text: string;
+  textKey?: string;
   iconName?: string;
-  variant?: ButtonVariant;
-  options: { label: string; url: string }[];
+  options: { label: string; labelKey?: string; url: string; lang?: string }[];
   class?: string;
 }
 
-const { text, iconName, options, class: className = "" } = Astro.props as Props;
+const { text, textKey, iconName, options, class: className = "" } = Astro.props as Props;
 const dropdownId = `cv-${Math.random().toString(36).slice(2)}`;
 ---
 
@@ -23,7 +22,7 @@ const dropdownId = `cv-${Math.random().toString(36).slice(2)}`;
     aria-controls={`${dropdownId}-menu`}
   >
     {iconName && <Icon name={iconName} class="size-4.5" aria-hidden="true" />}
-    {text}
+    <span data-i18n={textKey}>{text}</span>
     <svg class="size-4 transition-transform" data-chevron fill="none" viewBox="0 0 20 20" stroke="currentColor" aria-hidden="true">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m6 8 4 4 4-4" />
     </svg>
@@ -31,13 +30,14 @@ const dropdownId = `cv-${Math.random().toString(36).slice(2)}`;
 
   <ul
     id={`${dropdownId}-menu`}
-    class="absolute left-0 top-full z-50 mt-2 hidden min-w-44 overflow-hidden rounded-xl border border-zinc-200 bg-white p-1.5 shadow-xl shadow-zinc-950/10 dark:border-zinc-800 dark:bg-zinc-900"
+    class="absolute left-0 top-full z-50 mt-2 hidden min-w-56 overflow-hidden rounded-xl border border-zinc-200 bg-white p-1.5 shadow-xl shadow-zinc-950/10 dark:border-zinc-800 dark:bg-zinc-900"
     role="menu"
   >
     {options.map((opt) => (
       <li role="none">
-        <a href={opt.url} download class="block rounded-lg px-3 py-2.5 text-sm font-medium text-zinc-700 transition hover:bg-zinc-100 hover:text-zinc-950 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-white" role="menuitem">
-          {opt.label}
+        <a href={opt.url} download class="flex items-center justify-between gap-4 rounded-lg px-3 py-2.5 text-sm font-medium text-zinc-700 transition hover:bg-zinc-100 hover:text-zinc-950 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-white" role="menuitem">
+          <span data-i18n={opt.labelKey}>{opt.label}</span>
+          {opt.lang && <span class="text-[10px] font-bold tracking-wider text-zinc-400">{opt.lang}</span>}
         </a>
       </li>
     ))}

@@ -3,6 +3,7 @@ import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
 import Social from "../ui/Social.astro";
 import ThemeIcon from "../ui/ThemeIcon.astro";
+import LanguageSelector from "../ui/LanguageSelector.astro";
 import Navigation from "./Navigation.astro";
 
 const [staticData] = await getCollection("staticData");
@@ -12,7 +13,7 @@ const navItems = ["home", "experience", "projects", "contact"];
 
 <header class="sticky top-0 z-50 w-full border-b border-zinc-200/70 bg-white/70 shadow-[0_1px_0_rgba(255,255,255,0.55)_inset] backdrop-blur-2xl dark:border-zinc-800/70 dark:bg-[#09090b]/70 dark:shadow-[0_1px_0_rgba(255,255,255,0.025)_inset]" role="banner">
   <div class="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 lg:px-8">
-    <a href="/#home" class="inline-flex items-center gap-3" aria-label="Alfredo Ramos — Home">
+    <a href="/#home" class="inline-flex items-center gap-3" aria-label="Alfredo Ramos — Home" data-i18n-aria-label="header.homeAria">
       <Icon name="logo" class="size-11 text-zinc-950 dark:text-white" aria-hidden="true" />
       <span class="hidden text-sm font-bold tracking-tight text-zinc-950 sm:block dark:text-white">Alfredo Ramos</span>
     </a>
@@ -24,8 +25,9 @@ const navItems = ["home", "experience", "projects", "contact"];
         <Social link={github} iconName={githubIconName} label="GitHub" />
         <Social link={linkedin} iconName={linkedinIconName} label="LinkedIn" />
       </div>
+      <LanguageSelector />
       <ThemeIcon />
-      <button id="hamburger-btn" type="button" class="ml-1 inline-flex size-9 items-center justify-center rounded-lg text-zinc-600 transition hover:bg-zinc-100 hover:text-zinc-950 md:hidden dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <button id="hamburger-btn" type="button" class="ml-1 inline-flex size-9 items-center justify-center rounded-lg text-zinc-600 transition hover:bg-zinc-100 hover:text-zinc-950 md:hidden dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white" aria-label="Open menu" data-i18n-aria-label="header.openMenu" aria-expanded="false" aria-controls="mobile-menu">
         <Icon name="bars" class="bars-icon size-5" aria-hidden="true" />
         <Icon name="xmark" class="xmark-icon hidden size-5" aria-hidden="true" />
       </button>
@@ -33,7 +35,7 @@ const navItems = ["home", "experience", "projects", "contact"];
 
     <nav id="mobile-menu" hidden class="absolute left-4 right-4 top-[calc(100%+0.5rem)] rounded-2xl border border-zinc-200/80 bg-white/90 p-2 shadow-2xl shadow-zinc-950/10 backdrop-blur-2xl md:hidden dark:border-zinc-800 dark:bg-zinc-900/90">
       {navItems.map((item) => (
-        <a href={`/#${item}`} class="block rounded-xl px-4 py-3 text-sm font-medium capitalize text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800">{item}</a>
+        <a href={`/#${item}`} class="block rounded-xl px-4 py-3 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800" data-i18n={`nav.${item}`}>{item.charAt(0).toUpperCase() + item.slice(1)}</a>
       ))}
       <div class="mt-1 flex border-t border-zinc-100 px-2 pt-2 dark:border-zinc-800">
         <Social link={github} iconName={githubIconName} label="GitHub" />

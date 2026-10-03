@@ -1,9 +1,10 @@
 ---
 const { date, class: className } = Astro.props;
-const formatted = new Date(date).toLocaleDateString("en-GB", { timeZone: "UTC", day: "numeric", month: "long", year: "numeric" });
+const dateObject = new Date(date);
+const formatted = dateObject.toLocaleDateString("en-GB", { timeZone: "UTC", day: "numeric", month: "long", year: "numeric" });
 ---
 
-<time datetime={new Date(date).toISOString()} class:list={["inline-flex items-center gap-2 text-sm font-medium text-zinc-500 dark:text-zinc-500", className]}>
+<time datetime={dateObject.toISOString()} class:list={["inline-flex items-center gap-2 text-sm font-medium text-zinc-500 dark:text-zinc-500", className]}>
   <svg class="size-4" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M4.5 1a.5.5 0 0 1 .5.5V2h5v-.5a.5.5 0 0 1 1 0V2h1.5A1.5 1.5 0 0 1 14 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 1 12.5v-9A1.5 1.5 0 0 1 2.5 2H4v-.5a.5.5 0 0 1 .5-.5ZM2 6v6.5a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V6H2Zm.5-3a.5.5 0 0 0-.5.5V5h11V3.5a.5.5 0 0 0-.5-.5H11v.5a.5.5 0 0 1-1 0V3H5v.5a.5.5 0 0 1-1 0V3H2.5Z" fill="currentColor"/></svg>
-  {formatted}
+  <span data-i18n-date={dateObject.toISOString()}>{formatted}</span>
 </time>

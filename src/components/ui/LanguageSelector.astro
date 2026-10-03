@@ -1,0 +1,87 @@
+---
+const languages = [
+  { code: "en", short: "EN", label: "English" },
+  { code: "es", short: "ES", label: "Español" },
+  { code: "fr", short: "FR", label: "Français" },
+  { code: "de", short: "DE", label: "Deutsch" },
+  { code: "da", short: "DA", label: "Dansk" },
+  { code: "zh", short: "中文", label: "中文" },
+];
+---
+
+<div class="relative" data-language-selector>
+  <button
+    type="button"
+    class="inline-flex h-9 min-w-12 items-center justify-center gap-1.5 rounded-lg border border-zinc-200/80 bg-white/70 px-2.5 text-xs font-bold tracking-wide text-zinc-700 shadow-sm shadow-zinc-950/[0.02] backdrop-blur transition hover:bg-zinc-100 hover:text-zinc-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-zinc-800 dark:bg-zinc-900/70 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-white"
+    aria-haspopup="menu"
+    aria-expanded="false"
+    data-language-button
+    data-i18n-aria-label="language.selectorAria"
+  >
+    <span data-language-current-code>EN</span>
+    <svg class="size-3.5 transition-transform" data-language-chevron fill="none" viewBox="0 0 20 20" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m6 8 4 4 4-4" />
+    </svg>
+  </button>
+
+  <div
+    class="absolute right-0 top-full z-[70] mt-2 hidden w-48 overflow-hidden rounded-2xl border border-zinc-200/80 bg-white/95 p-1.5 shadow-2xl shadow-zinc-950/10 backdrop-blur-2xl dark:border-zinc-800 dark:bg-zinc-900/95"
+    role="menu"
+    data-language-menu
+    data-i18n-aria-label="language.menuAria"
+  >
+    {languages.map((language) => (
+      <button
+        type="button"
+        role="menuitem"
+        class="flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-zinc-700 transition hover:bg-zinc-100 hover:text-zinc-950 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-white"
+        data-language-option={language.code}
+        aria-current={language.code === "en" ? "true" : "false"}
+      >
+        <span>{language.label}</span>
+        <span class="flex items-center gap-2 text-xs font-bold text-zinc-400">
+          {language.short}
+          <span data-language-active class:list={["size-1.5 rounded-full bg-blue-500", language.code !== "en" && "opacity-0"]}></span>
+        </span>
+      </button>
+    ))}
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-language-selector]").forEach((root) => {
+    const button = root.querySelector<HTMLButtonElement>("[data-language-button]");
+    const menu = root.querySelector<HTMLElement>("[data-language-menu]");
+    const chevron = root.querySelector<HTMLElement>("[data-language-chevron]");
+    if (!button || !menu) return;
+
+    const close = () => {
+      button.setAttribute("aria-expanded", "false");
+      menu.classList.add("hidden");
+      chevron?.classList.remove("rotate-180");
+    };
+
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const open = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", String(!open));
+      menu.classList.toggle("hidden", open);
+      chevron?.classList.toggle("rotate-180", !open);
+    });
+
+    root.querySelectorAll<HTMLButtonElement>("[data-language-option]").forEach((option) => {
+      option.addEventListener("click", () => {
+        const language = option.dataset.languageOption;
+        if (language) window.setPortfolioLanguage?.(language);
+        close();
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!root.contains(event.target as Node)) close();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") close();
+    });
+  });
+</script>
