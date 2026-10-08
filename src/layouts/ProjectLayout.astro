@@ -6,50 +6,93 @@ import Capsule from "../components/ui/Capsule.astro";
 import { Icon } from "astro-icon/components";
 import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
-const rawProjectKey = Astro.url.pathname.split('/').filter(Boolean).pop() || "walletbill";
-const projectKey = rawProjectKey.toLowerCase() === "sanjuan" ? "sanJuan" : rawProjectKey.toLowerCase();
+const rawProjectKey =
+	Astro.url.pathname.split("/").filter(Boolean).pop() || "walletbill";
+const projectKey =
+	rawProjectKey.toLowerCase() === "sanjuan"
+		? "sanJuan"
+		: rawProjectKey.toLowerCase();
 const descriptionKey = `projects.${projectKey}.description`;
 const contentKey = `projects.${projectKey}.contentHtml`;
 ---
 
 <Layout
-  pageTitle={`${frontmatter.title} — Alfredo Ramos`}
-  description={frontmatter.description}
-  descriptionKey={descriptionKey}
-  ogimage={frontmatter.image}
+	pageTitle={`Alfredo Ramos`}
+	description={frontmatter.description}
+	descriptionKey={descriptionKey}
+	ogimage={frontmatter.image}
 >
-  <section class="relative isolate overflow-hidden px-6 pb-16 pt-10 lg:px-8 lg:pb-24 lg:pt-14">
-    <div class="section-grid-accent -z-20 opacity-[0.35] dark:opacity-[0.30]"></div>
-    <div class="pointer-events-none absolute left-1/2 top-[-14rem] -z-10 h-[32rem] w-[62rem] -translate-x-1/2 rounded-full bg-blue-500/[0.055] blur-[110px] dark:bg-blue-500/[0.075]"></div>
-    <div class="mx-auto max-w-7xl">
-      <a href="/#projects" class="inline-flex items-center gap-2 rounded-lg px-2 py-2 text-sm font-semibold text-zinc-500 transition hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white">
-        <Icon name="arrow-left" class="size-4" aria-hidden="true" />
-        <span data-i18n="project.back">Back to projects</span>
-      </a>
+	<section
+		class="relative isolate overflow-hidden px-6 pb-16 pt-10 lg:px-8 lg:pb-24 lg:pt-14"
+	>
+		<div class="section-grid-accent -z-20 opacity-[0.35] dark:opacity-[0.30]">
+		</div>
+		<div
+			class="pointer-events-none absolute left-1/2 top-[-14rem] -z-10 h-[32rem] w-[62rem] -translate-x-1/2 rounded-full bg-blue-500/[0.055] blur-[110px] dark:bg-blue-500/[0.075]"
+		>
+		</div>
+		<div class="mx-auto max-w-7xl">
+			<a
+				href="/#projects"
+				class="inline-flex items-center gap-2 rounded-lg px-2 py-2 text-sm font-semibold text-zinc-500 transition hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white"
+			>
+				<Icon name="arrow-left" class="size-4" aria-hidden="true" />
+				<span data-i18n="project.back">Back to projects</span>
+			</a>
 
-      <div class="mt-8 grid gap-12 xl:grid-cols-[minmax(0,1fr)_17rem] xl:gap-16">
-        <article class="min-w-0">
-          <header id="start" class="max-w-4xl">
-            <div class="flex flex-wrap gap-2">{frontmatter.languages.map((language: string) => <Capsule linkEnabled={false} lang={language} size="xs" />)}</div>
-            <h1 class="mt-6 text-5xl font-bold tracking-[-0.055em] text-zinc-950 sm:text-6xl dark:text-white">{frontmatter.title}</h1>
-            <p class="mt-5 max-w-3xl text-lg leading-8 text-zinc-600 dark:text-zinc-400" data-i18n={descriptionKey}>{frontmatter.description}</p>
-            <div class="mt-5"><DatePub date={frontmatter.pubDate} /></div>
-          </header>
+			<div
+				class="mt-8 grid gap-12 xl:grid-cols-[minmax(0,1fr)_17rem] xl:gap-16"
+			>
+				<article class="min-w-0">
+					<header id="start" class="max-w-4xl">
+						<div class="flex flex-wrap gap-2">
+							{
+								frontmatter.languages.map((language: string) => (
+									<Capsule linkEnabled={false} lang={language} size="xs" />
+								))
+							}
+						</div>
+						<h1
+							class="mt-6 text-5xl font-bold tracking-[-0.055em] text-zinc-950 sm:text-6xl dark:text-white"
+						>
+							{frontmatter.title}
+						</h1>
+						<p
+							class="mt-5 max-w-3xl text-lg leading-8 text-zinc-600 dark:text-zinc-400"
+							data-i18n={descriptionKey}
+						>
+							{frontmatter.description}
+						</p>
+						<div class="mt-5"><DatePub date={frontmatter.pubDate} /></div>
+					</header>
 
-          {frontmatter.image?.url && (
-            <figure class="mt-10 overflow-hidden glass-surface rounded-2xl bg-zinc-100/60 shadow-xl shadow-zinc-950/[0.05] dark:bg-zinc-900/60 dark:shadow-black/20">
-              <img class="w-full" src={frontmatter.image.url} alt={frontmatter.image.alt || `${frontmatter.title} project preview`} />
-            </figure>
-          )}
+					{
+						frontmatter.image?.url && (
+							<figure class="mt-10 overflow-hidden glass-surface rounded-2xl bg-zinc-100/60 shadow-xl shadow-zinc-950/[0.05] dark:bg-zinc-900/60 dark:shadow-black/20">
+								<img
+									class="w-full"
+									src={frontmatter.image.url}
+									alt={
+										frontmatter.image.alt ||
+										`${frontmatter.title} project preview`
+									}
+								/>
+							</figure>
+						)
+					}
 
-          <div class="markdown mt-12 max-w-4xl" id="content" data-i18n-html={contentKey}>
-            <slot />
-          </div>
-        </article>
+					<div
+						class="markdown mt-12 max-w-4xl"
+						id="content"
+						data-i18n-html={contentKey}
+					>
+						<slot />
+					</div>
+				</article>
 
-        <NavArticle title={frontmatter.title} />
-      </div>
-    </div>
-  </section>
-  <Contact />
+				<NavArticle title={frontmatter.title} />
+			</div>
+		</div>
+	</section>
+	<Contact />
 </Layout>
